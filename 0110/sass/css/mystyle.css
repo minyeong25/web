@@ -173,7 +173,9 @@ section {
   text-decoration: underline;
 }
 
-.box, .new2, .new1 {
+.box,
+.new2,
+.new1 {
   padding: 20px;
   border: 1px solid #f00;
 }

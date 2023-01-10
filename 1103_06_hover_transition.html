@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banner transition</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            position: relative;
+            width: 100px;
+            height: 30px;
+            background: #f0f0f0;
+        }
+        li p {
+            text-align: center;
+            line-height: 30px;
+        }
+        .line {
+            position: absolute;
+            background: #07348c;
+            z-index: 1;
+        }
+        .line-top {
+            width: 100%;
+            height: 1px;
+            left: 0;
+            top: 0;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+        ul li:hover .line-top {
+            transform: scaleX(1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .line-right {
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            transform: scaleY(0);
+            transition: transform 0.5s ease-in-out;
+        }
+        ul li:hover .line-right {
+            transform: scaleY(1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .line-bottom {
+            width: 100%;
+            height: 1px;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+        ul li:hover .line-bottom {
+            transform: scaleX(1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .line-left {
+            width: 1px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transform: scaleY(0);
+            transition: transform 0.5s ease-in-out;
+        }
+        ul li:hover .line-left {
+            transform: scaleY(1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>인재상</p>
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+        </li>
+    </ul>
+</body>
+</html>

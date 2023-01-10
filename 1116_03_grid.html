@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 200px 100px;
+        }
+        .grid-item:first-child {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 40px;
+            /* background: #aaa; */
+            grid-column: 1 / 4;
+            align-content: center;
+        }
+        .grid-item:first-child .logo {
+            background: #f00;
+        }
+        .grid-item:first-child .menu {
+            /* background: #0f0; */
+        }
+        .grid-item:first-child .menu > ul {
+            margin-left: 150px;
+            width: 800px;
+            display: flex;
+        }
+        .grid-item:first-child .menu > ul li:hover > a {
+            background: #000;
+            color: #fff;
+        }
+        .grid-item:first-child .menu > ul > li {
+            width: 25%;
+            position: relative;
+        }
+        .grid-item:first-child .menu > ul:hover li ul {
+            height: 120px;
+            border-bottom: 1px solid #000;
+        }
+        .grid-item:first-child .menu > ul > li > a {
+            display: block;
+            color: #000;
+            background: #fff;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #000;
+            border-right: none;
+            box-sizing: border-box;
+        }
+        .grid-item:first-child .menu > ul > li:last-child > a {
+            border-right: 1px solid #000;
+        }
+        .grid-item:first-child .menu li ul {
+            width: 100%;
+            position: absolute;
+        }
+        .grid-item:first-child .menu li:first-child ul li a {
+            border-left: 1px solid #000;
+        }
+        .grid-item:first-child .menu li:last-child ul li a {
+            border-right: 1px solid #000;
+        }
+        .grid-item:first-child .menu li ul {
+            height: 0;
+            overflow: hidden;
+            background: #fff;
+            box-sizing: border-box;
+        }
+        .grid-item:first-child .menu li ul li a {
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            text-align: center;
+            color: #000;
+        }
+        .grid-item:nth-child(2) {
+            background: #bbb;
+            grid-column: 1 / span 3;
+        }
+        .grid-item:nth-child(3) {
+            background: #ccc;
+        }
+        .grid-item:nth-child(4) {
+            background: #ddd;
+        }
+        .grid-item:nth-child(5) {
+            background: #eee;
+        }
+        .grid-item:nth-child(6) {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+             /* grid-template-rows: 40px; */
+            /* background: #000;
+            color: #fff; */
+            grid-column: 1 / 4;
+            align-content: center;
+            /* text-align: center; */
+            justify-items: center;
+            align-items: center;
+        }
+        .grid-item:nth-child(6) .logo {
+            background: #f00;
+        }
+        .grid-item:nth-child(6) .copyright {
+            background: #0f0;
+        }
+        .grid-item:nth-child(6) .sns {
+            background: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="logo"><img src="images/logo.jpg" alt="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">탑</a>
+                        <ul>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul>
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul>
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-item">slide</div>
+        <div class="grid-item">content1</div>
+        <div class="grid-item">content2</div>
+        <div class="grid-item">content3</div>
+        <div class="grid-item">
+            <div class="logo">로고</div>
+            <div class="copyright">copyright<br>copyright<br>copyright</div>
+            <div class="sns">sns</div>
+        </div>
+    </div>
+</body>
+</html>

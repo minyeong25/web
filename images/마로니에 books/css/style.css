@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: Arial, "맑은 고딕", sans-serif;
+}
+#wrap {
+    background: #e2c738;
+}
+header {
+    width: 1000px;
+    margin: 0 auto;
+}
+header .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .top ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header .top ul h1 {
+    font-family: 바탕;
+    color: #e22f4d;
+    font-size: 40px;
+}
+header .top ul:first-child {
+    padding-left: 20px;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    background: #000;
+}
+nav ul a {
+    display: block;
+    color: #fff;
+    padding: 10px 40px;
+    font-size: 14px;
+}
+nav ul li:first-child a {
+    margin-left: 50px;
+}
+section {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+section .left {
+    width: 30%;
+    padding: 20px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+section .left_top h2 {
+    color: #53515e;
+}
+section .left_top > ul > li a {
+    color: #000;
+}
+section .left_top > ul > li a:hover {
+    text-decoration: underline;
+    color: #0c00a5;
+}
+section .left_top > ul > li > ul img {
+    vertical-align: middle;
+}
+section .left_center {
+    padding: 20px 0;
+}
+section .left_center h2 {
+    padding-bottom: 10px;
+}
+section .left_center ul li {
+    padding: 10px 0;
+    border-bottom: 1px dotted #53515e;
+}
+section .left_center ul li a {
+    padding: 10px 0;
+    color: #000;
+}
+section .left_center ul li a:hover {
+    text-decoration: underline;
+}
+section .left_bottom {
+    padding: 20px 0;
+}
+section .left_bottom h2 {
+    padding-bottom: 10px;
+}
+section .left_bottom ul li {
+    padding: 10px 0;
+    border-bottom: 1px dotted #53515e;
+}
+section .left_bottom ul li a {
+    padding: 10px 0;
+    color: #000;
+}
+section .left_bottom ul li a:hover {
+    text-decoration: underline;
+}
+.right {
+    width: 70%;
+    padding: 30px 20px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: -1px 0 5px rgb(162, 162, 162);
+    /* overflow: hidden; */
+}
+.right div {
+    padding: 30px 0 50px 0;
+    border-bottom: 1px dotted #e22f4d;
+    overflow: hidden;
+}
+.right h2 {
+    padding-bottom: 10px;
+    color: #e22f4d;
+}
+.right h3 {
+    padding-left: 180px;
+    padding-bottom: 5px;
+}
+.right p:first-of-type {
+    font-size: 12px;
+    padding-left: 180px;
+    color: #e22f4d;
+}
+.right p:last-of-type {
+    padding: 50px 0 20px 0;
+    text-align: justify;
+    font-size: 14px;
+}
+.right input {
+    padding: 10px 20px;
+    background: #e22f4d;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+}
+.right .right_bottom {
+    border-bottom: none;
+}
+footer p{
+    text-align: center;
+    padding: 30px 0 10px 0;
+    color: #53515e;
+    font-size: 12px;
+}

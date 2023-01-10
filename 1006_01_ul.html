@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul태그</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        ul.a01 {
+            list-style-type: square;
+            margin: 10px ;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        /* .a01, .a02, p, li{
+        }그룹선택 */
+
+        ol{
+            list-style-type: lower-roman;
+            margin: 20px;
+            padding: 20px;
+        }
+        ol#im{
+            list-style-image: url(images/ico_bbslist.gif);
+        }
+    
+   </style>
+
+
+</head>
+
+<body>
+    <p class="a01">클래스이름이 a01</p>
+    <ul class="a01">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>   
+    <ul class="a02">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>   
+    <ol>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ol>
+    <ol id="im">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <ul>
+            <li>리스트</li>
+            <li>리스트</li>
+            <li>리스트</li>
+            <li>리스트</li>
+        </ul>
+    </ol>
+</body>
+</html>

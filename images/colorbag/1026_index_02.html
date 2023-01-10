@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorbag</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        ul {
+            list-style: none;
+        }
+        /* .menu_top {
+            height: 128px;
+            background: url(images/color_topbg.jpg) repeat-x;
+        } */
+        .logo {
+            width: 999px;
+            margin: 30px auto 0;
+            text-align: center;
+        }
+        .mini {
+            width: 999px;
+            margin: 0 auto;
+        }
+        .mini ul{
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .mini ul li:hover {
+            cursor: pointer;
+        }
+        .gnb {
+            background: #425b71;
+        }
+        .gnb ul {
+            width: 999px;
+            background: #425b71;
+            margin: 25px auto 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .gnb ul li::after {
+            content: url(images/color_topmenuline.jpg);
+        }
+        .gnb ul li:last-child::after {
+            content: "";
+        }
+        input[type=radio] {
+            display: none;
+        }
+        .visual img {
+            width: 999px;
+            margin: 10px auto 0;
+            display: none;
+        }
+        #one:checked ~ p img:first-child {
+            display: block;
+        }
+        #two:checked ~ p img:nth-child(2) {
+            display: block;
+        }
+        #three:checked ~ p img:last-child {
+            display: block;
+        }
+        .letter {
+            width: 999px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .letter label {
+            width: 33.333%;
+            height: 30px;
+            background: #9acccd;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+        }
+        .letter label:hover {
+            background: #6e999a;
+            cursor: pointer;
+        }
+        .contents ul {
+            width: 999px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contents ul li {
+            text-align: center;
+            font-size: 14px;
+        }
+        .cs{
+            width: 999px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cs ul:first-child li:first-child {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .cs ul:first-child {
+            font-size: 14px;
+        }
+        .cs ul:nth-child(2) {
+            display: flex;
+        }
+        .cs ul li:first-child a:hover {
+            content: url(images/csbanner_over.jpg);
+        }
+        .cs ul li:nth-child(2) a:hover {
+            content: url(images/csbanner_over-02.jpg);
+        }
+        .cs ul li:last-child a:hover {
+            content: url(images/csbanner_over-03.jpg);
+        }
+        .footer {
+            width: 999px;
+            margin: 0 auto;
+        }
+        .footer ul {
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .footer ul:first-child {
+            display: flex;
+            justify-content: start;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .footer ul:first-child li {
+            padding: 5px;
+        }
+        .footer ul:first-child li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="menu_top">
+            <div class="logo">
+                <img src="images/color_toplogo.jpg" alt="toplogo">
+            </div>
+            <div class="mini">
+                    <ul>
+                        <li><a href="#"><img src="images/color_topmini1.jpg" alt="topmini1"></a></li>
+                        <li><img src="images/topmini2.jpg" alt="topmini2"></li>
+                        <li><img src="images/topmini3.jpg" alt="topmini3"></li>
+                        <li><img src="images/topmini4.jpg" alt="topmini4"></li>
+                        <li><img src="images/topmini5.jpg" alt="topmini5"></li>
+                        <li><img src="images/topmini6.jpg" alt="topmini6"></li>
+                    </ul>
+            </div>
+            <div class="gnb">
+                <ul>
+                    <li><img src="images/color_topmenu1.jpg" alt="topmenu1"></li>
+                    <li><img src="images/color_topmenu2.jpg" alt="topmenu2"></li>
+                    <li><img src="images/color_topmenu3.jpg" alt="topmenu3"></li>
+                    <li><img src="images/color_topmenu4.jpg" alt="topmenu4"></li>
+                    <li><img src="images/color_topmenu5.jpg" alt="topmenu5"></li>
+                    <li><img src="images/color_topmenu6.jpg" alt="topmenu6"></li>
+                    <li><img src="images/color_topmenu7.jpg" alt="topmenu7"></li>
+                    <li><img src="images/color_topmenu8.jpg" alt="topmenu8"></li>
+                </ul>
+            </div>
+        </div>
+       <div class="visual">
+            <form action="">
+                <input type="radio" name="photo" id="one" checked>
+                <input type="radio" name="photo" id="two">
+                <input type="radio" name="photo" id="three">
+                <p>
+                    <img src="images/color_main1.jpg" alt="1">
+                    <img src="images/color_main2.jpg" alt="2">
+                    <img src="images/color_main3.jpg" alt="3">
+                </p>
+                <p class="letter">
+                    <label for="one">스퀘어 토드 숄더백(합성피혁)</label>
+                    <label for="two">사각 누빔 체인백(합성피혁)</label>
+                    <label for="three">사각 퀄팅 백(합성피혁)</label>
+                </p>
+            </form>
+       </div>
+       <div class="contents">
+            <ul>
+                <li>
+                    <img src="images/pro1.jpg" alt="pro1">
+                    <p>사각 누빔 체인백<br>콤인디핑크/아이보리/에나멜 블랙</p>
+                </li>
+                <li>
+                    <img src="images/pro2.jpg" alt="pro2">
+                    <p>뱀피 라인 체인백<br>아이보리/블랙/브라운</p>
+                </li>
+                <li>
+                    <img src="images/pro3.jpg" alt="pro3">
+                    <p>골드 체인라인 백<br>합성피혁/블랙</p>
+                </li>
+                <li>
+                    <img src="images/pro4.jpg" alt="pro4">
+                    <p>밍크백<br>블랙/Free</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="images/pro5.jpg" alt="pro5">
+                    <p>스퀘어 토드 숄더백<br>핑크/레드/블랙/소라</p>
+                </li>
+                <li>
+                    <img src="images/pro6.jpg" alt="pro6">
+                    <p>레오파드 비비드 백<br>그레이/민트/핫핑크</p>
+                </li>
+                <li>
+                    <img src="images/pro7.jpg" alt="pro7">
+                    <p>미르젤라 클러치 백<br>블랙/아이보리/핑크/핫핑크</p>
+                </li>
+                <li>
+                    <img src="images/pro8.jpg" alt="pro8">
+                    <p>엠보싱클러치 백<br>골드/실버/블랙</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="images/pro9.jpg" alt="pro9">
+                    <p>Free 숄더백<br>블랙/브라운</p>
+                </li>
+                <li>
+                    <img src="images/pro10.jpg" alt="pro10">
+                    <p>은징 장식 클러치백<br>블랙/아이보리/핑크/핫핑크</p>
+                </li>
+                <li>
+                    <img src="images/pro11.jpg" alt="pro11">
+                    <p>구슬 백팩<br>블랙/아이보리/핑크/핫핑크</p>
+                </li>
+                <li>
+                    <img src="images/pro12.jpg" alt="pro12">
+                    <p>숄더백<br>브라운/블랙/아이보리/핑크/핫핑크</p>
+                </li>
+            </ul>
+       </div>
+       <div class="cs">
+            <ul>
+                <li><strong>NOTICE</strong></li>
+                <li>[2012/12/25]사랑해요 고객님 이벤트에...</li>
+                <li>[2012/12/25]신규회원 가입고객 이벤트 응모...</li>
+                <li>[2012/12/25]후기를 남겨주시면 할인쿠폰...</li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/csbanner.jpg" alt="csbanner"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/csbanner-02.jpg" alt="csbanner02"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/csbanner-03.jpg" alt="csbanner03"></a>
+                </li>
+            </ul>
+            <ul>
+                <li><img src="images/cscenter.jpg" alt="cscenter"></li>
+            </ul>
+       </div>
+       <div class="footer">
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">서비스이용약관</a></li>
+                <li><a href="#">이메일문의</a></li>
+            </ul>
+            <ul>
+                <li>상호:(주) 디자인아트 플러스. 대표:임화연 주소:서울구로구 구로동 에이스 하이엔드타워 2차</li>
+                <li>copyrights ⓒ 2000 designartplus allrights reserved</li>
+            </ul>
+       </div>
+    </div>
+   
+</body>
+</html>

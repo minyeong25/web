@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click-popup</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            padding: 20px;
+        }
+        .txt {
+            position: relative;
+        }
+        .pop {
+            opacity: 1;
+        }
+        .pop .popup {
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            background: #000;
+            color: #fff;
+            border-radius: 10px;
+            width: 150px;
+            padding: 10px;
+        }
+        .pop .popup::after {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            transform: translate(-50%);
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 10px solid #000;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        
+    </style>
+    <script>
+        function myfnc() {
+            document.getElementsByClassName("txt")[0].classList.toggle("pop");
+        }
+    </script>
+</head>
+<body>
+    <h1>Popup</h1>
+    <div class="txt">
+        <p class="nopopup" onclick="myfnc()">Click me to toggle the popup!</p>
+        <p class="popup">A Simple Popup!</p>
+    </div>
+</body>
+</html>

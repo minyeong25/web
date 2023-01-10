@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            width: 1000px;
+            display: flex;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        div.contents > div {
+            width: 1000px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        div.contents .london {
+            background: rgb(255, 185, 87);
+        }
+        div.contents .paris {
+            background: rgb(183, 255, 100);
+            display: none;
+        }
+        div.contents .tokyo {
+            background: rgb(244, 255, 119);
+            display: none;
+        }
+        div.contents .osio {
+            background: rgb(255, 159, 117);
+            display: none;
+        }
+        li {
+            width: 25%;
+        }
+        li a {
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            background: #ccc;
+            color: #fff;
+        }
+        #london:checked .london {
+            display: block;
+        }
+        #london:checked .london div:not(.london){
+            display: none;
+        }
+        #paris:checked .paris {
+            display: block;
+        }
+        #paris:checked .paris div:not(.paris){
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <input type="radio" name="city" id="london" checked>
+        <input type="radio" name="city" id="paris">
+        <input type="radio" name="city" id="tokyo">
+        <input type="radio" name="city" id="osio">
+        <div class="contents">
+            <div class="london">
+                <h2>London</h2>
+                <p>Lodon is the capital of </p>
+            </div>
+            <div class="paris">
+                <h2>Paris</h2>
+                <p>Paris is the capital of </p>
+            </div>
+            <div class="tokyo">
+                <h2>Tokyo</h2>
+                <p>tokyo is the capital of </p>
+            </div>
+            <div class="osio">
+                <h2>Osio</h2>
+                <p>Osio is the capital of </p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#"><label for="london">London</label></a></li>
+            <li><a href="#"><label for="paris">Paris</label></a></li>
+            <li><a href="#"><label for="tokyo">Tokyo</label></a></li>
+            <li><a href="#"><label for="osio">Osio</label></a></li>
+        </ul>
+        <!-- <label for="london">London</label>
+        <label for="paris">Paris</label>
+        <label for="tokyo">Tokyo</label>
+        <label for="osio">Osio</label> -->
+    </div>
+</body>
+</html>

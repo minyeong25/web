@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breadfestival</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, "맑은 고딕";
+        }
+        nav {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        nav ul {
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        nav ul li a {
+            line-height: 100px;
+            color: #9f491a;
+            font-weight: 1000;
+            font-size: 30px;
+        }
+        nav ul li img {
+            vertical-align: middle;
+        }
+        .logo1 img {
+            height: 100px;
+        }
+        .logo2 img {
+            height: 40px;
+        }
+        .lang img {
+            height: 70px;
+        }
+        .visual img {
+            width: 100%;
+            text-align: center;
+        }
+        #first {
+            width: 1280px;
+            margin: 200px auto;
+            text-align: center;
+        }
+        #first h1 {
+            font-size: 50px;
+        }
+        #first p {
+            font-size: 25px;
+        }
+        .top {
+            margin: 0 auto;
+        }
+        .wrap {
+            margin-top: 100px;
+            width: 1280px;
+            /* border: 1px solid; */
+            display: flex;
+            justify-content: center;
+            width: 1280px; 
+        }
+        .wrap div ul li {
+            padding: 10px 0;
+            font-size: 30px;
+        }
+        .wrap .left {
+            margin-right: 100px;
+        }
+        .wrap .right {
+            text-align: left;
+        }
+        #second {
+            padding: 100px 0;
+            background: #F7DCA2;
+        }
+        .sec_wrap {
+            width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 30px;
+        }
+        #second .program {
+            margin-top: 100px;
+            height: 289px;
+            display: flex;
+            justify-content: center;
+            height: 390px;
+        }
+        #second .program div {
+            line-height: 390px;
+            font-size: 50px;
+            position: relative;
+        }
+        /* #second .program div::after {
+            content: "";
+            height: 50px;
+            width: 50px;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            border: 1px solid #ccc;
+            left: 0;
+            top: 170px;
+        } */
+        .arrow_left {
+            margin-right: 30px;
+        }
+        .arrow_right {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo1"><a href="#"><img src="../빵모았당/1 로고.png" alt="로고"></a></li>
+                <li class="logo2"><a href="#"><img src="../빵모았당/logo.png" alt="logo"></a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">프로그램</a></li>
+                <li><a href="#">라인업</a></li>
+                <li><a href="#">커뮤니티</a></li>
+                <li><a href="#">입점 및 제휴</a></li>
+                <li class="lang"><a href="#"><img src="../빵모았당/lang.png" alt="lang"></a></li>
+            </ul>
+        </nav>
+        <div class="visual">
+            <img src="../빵모았당/banner.jpg" alt="banner">
+        </div>
+    </header>
+    <section id="first">
+        <div class="top">
+            <h1>2022 Daejeon Bread Festival</h1>
+            <p>전국의 여러 빵집과 함께 다양한 먹거리는 물론<br> 
+                볼거리도 풍부한 빵 축제가 개최됩니다</p>
+        </div>
+        <div class="wrap">
+            <div class="left">
+                <ul>
+                    <li>행사명</li>
+                    <li>기간</li>
+                    <li>장소</li>
+                    <li>주최대전관광공사</li>
+                    <li>프로그램</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>빵모았당</li>
+                    <li>2022.05.21~2022.05.22</li>
+                    <li>대전 근현대사전시관</li>
+                    <li>대전관광공사</li>
+                    <li>아티스트 공연 및 빵 관련 게임 등</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="second">
+       <div class="sec_wrap">
+            <h1>누구나 참여 가능한 재미있는<br> 
+                빵모았당 프로그램</h1>
+            <div class="program">
+                <div class="arrow_left">〈</div>
+                <img src="../빵모았당/프로그램1.JPG" alt="program1">
+                <div class="arrow_right">〉</div>
+            </div>
+       </div>
+    </section>
+</body>
+</html>

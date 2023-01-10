@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 200px 100px;
+        }
+        .grid-item:first-child {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 40px;
+            /* background: #aaa; */
+            grid-column: 1 / 4;
+            align-content: center;
+        }
+        .grid-item:first-child .logo {
+            background: #f00;
+        }
+        .grid-item:first-child .menu {
+            /* background: #0f0; */
+        }
+        .grid-item:first-child .menu > ul {
+            margin-left: 150px;
+            width: 800px;
+            display: flex;
+        }
+        .grid-item:first-child .menu > ul li:hover > a {
+            background: #000;
+            color: #fff;
+        }
+        .grid-item:first-child .menu > ul > li {
+            width: 25%;
+            position: relative;
+        }
+        .grid-item:first-child .menu > ul:hover li ul {
+            height: 120px;
+            border-bottom: 1px solid #000;
+        }
+        .grid-item:first-child .menu > ul > li > a {
+            display: block;
+            color: #000;
+            background: #fff;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #000;
+            border-right: none;
+            box-sizing: border-box;
+        }
+        .grid-item:first-child .menu > ul > li:last-child > a {
+            border-right: 1px solid #000;
+        }
+        .grid-item:first-child .menu li ul {
+            width: 100%;
+            position: absolute;
+        }
+        .grid-item:first-child .menu li:first-child ul li a {
+            border-left: 1px solid #000;
+        }
+        .grid-item:first-child .menu li:last-child ul li a {
+            border-right: 1px solid #000;
+        }
+        .grid-item:first-child .menu li ul {
+            height: 0;
+            overflow: hidden;
+            background: #fff;
+            box-sizing: border-box;
+        }
+        .grid-item:first-child .menu li ul li a {
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            text-align: center;
+            color: #000;
+        }
+        .grid-item:nth-child(2) {
+            background: #bbb;
+            grid-column: 1 / span 3;
+        }
+        .grid-item:nth-child(2) img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .grid-item:nth-child(3) {
+            /* background: #ccc; */
+        }
+        .grid-item:nth-child(3) input[type=radio] {
+            display: none;
+        }
+        .grid-item:nth-child(3) ul.btn {
+            display: flex;
+            margin-top: 10px;
+            margin-left: 15px;
+            position: absolute;
+            z-index: 1;
+        }
+        #notice:checked ~ .btn li:first-child {
+            background: #fff;
+            border-bottom: none;
+        }
+        #gallery:checked ~ .btn li:last-child {
+            background: #fff;
+            border-bottom: none;
+        }
+        #notice:checked ~ ul.con li.first {
+            display: block;
+        }
+        #notice:checked ~ ul.con li.second {
+            display: none;
+        }
+        #gallery:checked ~ ul.con li.first {
+            display: none;
+        }
+        #gallery:checked ~ ul.con li.second {
+            display: block;
+        }
+        .grid-item:nth-child(3) ul.btn li:first-child {
+            border-right: none;
+        }
+        .grid-item:nth-child(3) ul.btn li {
+            background: #ccc;
+            text-align: center;
+            width: 100px;
+            border: 1px solid #000;
+        }
+        .grid-item:nth-child(3) ul.btn li label {
+            display: block;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        .grid-item:nth-child(3) ul.con {
+            position: relative;
+            top: 51px;
+            border: 1px solid #000;
+            background: #fff;
+            height: 140px;
+            width: 385px;
+            margin-left: 5px;
+        }
+        .grid-item:nth-child(3) ul.con table {
+            margin: 0 5px;
+            font-size: 14px;
+            padding: 2px 5px;
+        }
+        .grid-item:nth-child(3) ul.con td a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .grid-item:nth-child(3) ul.con td a {
+            display: block;
+            width: 250px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 15px;
+            margin-right: 30px;
+            color: #000;
+        }
+        .grid-item:nth-child(3) ul.con li.second ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .grid-item:nth-child(3) ul.con li.second img {
+            width: 120px;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .grid-item:nth-child(4) {
+            background: #ddd;
+        }
+        .grid-item:nth-child(5) {
+            background: #eee;
+        }
+        .grid-item:nth-child(6) {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            grid-column: 1 / 4;
+        }
+        .grid-item:nth-child(6) > div {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        .grid-item:nth-child(6) .logo_wrap {
+            background: #f00;
+            /* display: grid;
+            justify-items: center;
+            align-items: center; */
+        }
+        .grid-item:nth-child(6) .copyright_wrap {
+            background: #0f0;
+            /* display: grid;
+            justify-items: center;
+            align-items: center; */
+        }
+        .grid-item:nth-child(6) .sns_wrap {
+            background: #00f;
+            /* display: grid;
+            justify-items: center;
+            align-items: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="logo"><img src="images/logo.jpg" alt="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">탑</a>
+                        <ul>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul>
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul>
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="images/매장전경2.jpg" alt="slide">
+        </div>
+        <div class="grid-item">
+            <input type="radio" name="board" id="notice" checked>
+            <input type="radio" name="board" id="gallery">
+            <ul class="btn">
+                <li><label for="notice">공지사항</label></li>
+                <li><label for="gallery">갤러리</label></li>
+            </ul>
+            <ul class="con">
+                <li class="first">
+                    <table>
+                        <tr>
+                            <td><a href="#popup">애스크로 서비스 변경 약관을 확인하세요</a></td></td>
+                            <td>2019-10-10</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#popup">배송 택배사 변경 및 배송방식 변경에 따른 공지</a></td></td>
+                            <td>2019-09-27</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#popup">여름 이월상품 정리 세일 안내</a></td></td>
+                            <td>2019-09-07</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#popup">여름 바캉스 상품 정리 세일 안내</a></td></td>
+                            <td>2019-08-24</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#popup">반품 및 교환 조건 변경 공지</a></td></td>
+                            <td>2019-07-27</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#popup">상품별 사이즈표 보는 방법과 치수 공지</a></td></td>
+                            <td>2019-05-25</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="second">
+                    <ul>
+                        <li><img src="images/gallery01.gif" alt="gallery01"></li>
+                        <li><img src="images/gallery02.gif" alt="gallery02"></li>
+                        <li><img src="images/gallery03.gif" alt="gallery03"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-item">content2</div>
+        <div class="grid-item">content3</div>
+        <div class="grid-item">
+            <div class="logo_wrap"><div class="logo">로고</div></div>
+            <div class="copyright_wrap"><div class="copyright">copyright<br>copyright<br>copyright</div></div>
+            <div class="sns_wrap"><div class="sns">sns</div></div>
+        </div>
+    </div>
+</body>
+</html>

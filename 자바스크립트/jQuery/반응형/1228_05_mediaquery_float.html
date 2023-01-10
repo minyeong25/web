@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 1em Arial, "맑은 고딕", 돋움, Doctum, sans-serif;
+      }
+      #wrap {
+        position: relative;
+        width: 100%;
+      }
+      header {
+        background: blue;
+      }
+      .header_wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+        background: blue;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+      }
+      .contents {
+        margin-top: 20px;
+      }
+      .contents section {
+        float: left;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+      .center {
+        width: calc(100% - 400px);
+      }
+      .left,
+      .right {
+        width: 200px;
+      }
+      .left li a {
+        display: block;
+        background: skyblue;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 20px 10px 20px;
+        color: #fff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      }
+      .center {
+        text-align: justify;
+        padding: 20px;
+      }
+      .right {
+        background: #555;
+        padding: 20px;
+      }
+      .right li a {
+        display: block;
+        color: #fff;
+      }
+      footer {
+        clear: both;
+        background: #000;
+        height: 40px;
+      }
+      @media screen and (max-width: 480px) {
+        .contents section {
+          width: 100%;
+          float: none;
+        }
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".btn").click(function () {
+          $(this).toggleClass("on");
+          //   class add 했다가 remove 했다가
+          $("nav").slideToggle();
+          //  toggle(): hide 했다가 show했다가
+          //   slideToggle() : slideUp slideDown
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="header_wrap">
+          <h1>대한민국</h1>
+          <h2>(대한민국/Republic of Korea)</h2>
+        </div>
+      </header>
+      <div class="contents">
+        <section class="left">
+          <ul>
+            <li><a href="#">서울</a></li>
+            <li><a href="#">대전</a></li>
+            <li><a href="#">대구</a></li>
+            <li><a href="#">부산</a></li>
+            <li><a href="#">광주</a></li>
+          </ul>
+        </section>
+        <section class="center">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum. Contrary to popular
+            belief, Ipsum. Contrary to popular belief, Lorem Ipsum is not simply
+            random text. It has roots in a piece of classical Latin literature
+            from 45 BC, making it over 2000 years old. Richard McClintock, a
+            Latin professor at Hampden-Sydney College in Virginia, looked up one
+            of the more obscure Latin words, consectetur, from a Lorem Ipsum
+            passage, and going through the cites of the word in classical
+            literature, discovered the undoubtable source. Lorem Ipsum comes
+            from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
+            book is a treatise on the theory of ethics, very popular during the
+            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+            amet..", comes from a line in section 1.10.32.Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries, but
+            also the leap into electronic typesetting, remaining essentially
+            unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently
+            with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is
+            not simply random text. It has roots in a piece of classical Latin
+            literature from 45 BC, making it over 2000 years old. Richard
+            McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+            looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in
+            classical literature, discovered the undoubtable source. Lorem Ipsum
+            comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+            Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+            BC. This book is a treatise on the theory of ethics, very popular
+            during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+            dolor sit amet..", comes from a line in section 1.10.32.
+          </p>
+          <p>
+            McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+            looked up one of the more obscure Latin words, consectetur, from a
+            Lorem Ipsum passage, and going through the cites of the word in
+            classical literature, discovered the undoubtable source. Lorem Ipsum
+            comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+            Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+            BC. This book is a treatise on the theory of ethics, very popular
+            during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+            dolor sit amet..", comes from a line in section 1.10.32.Lorem Ipsum
+            is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley of type and scrambled
+            it to make a type specimen book. It has survived not only five
+            centuries, but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker
+            including versions of Lorem Ipsum. Contrary to popular belief, Lorem
+            Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years
+            old. Richard McClintock, a Latin professor at Hampden-Sydney College
+            in Virginia, looked up one of the more obscure Latin words,
+            consectetur, from a Lorem Ipsum passage, and going through the cites
+            of the word in classical literature, discovered the undoubtable
+            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
+            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
+            Cicero, written in 45 BC. This book is a treatise on the theory of
+            ethics, very popular during the Renaissance. The first line of Lorem
+            Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+            1.10.32.Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum
+            passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum. Contrary to
+            popular belief, Lorem Ipsum is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more
+            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+            going through the cites of the word in classical literature,
+            discovered the undoubtable source. Lorem Ipsum comes from sections
+            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
+            of Good and Evil) by Cicero, written in 45 BC. This book is a
+            treatise on the theory of ethics, very popular during the
+            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+            amet..", comes from a line in section 1.10.32.
+          </p>
+        </section>
+        <section class="right">
+          <ul>
+            <li><a href="#">menu01</a></li>
+            <li><a href="#">menu02</a></li>
+            <li><a href="#">menu03</a></li>
+            <li><a href="#">menu04</a></li>
+            <li><a href="#">menu05</a></li>
+            <li><a href="#">menu06</a></li>
+            <li><a href="#">menu07</a></li>
+          </ul>
+        </section>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>

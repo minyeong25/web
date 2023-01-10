@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        overflow: hidden;
+      }
+      .boxwrap {
+        display: table;
+        table-layout: fixed;
+        /* 좌우로 할 때는 table이 있어야함 */
+        width: 700%;
+        height: 100%;
+      }
+      .box {
+        display: table-cell;
+        color: #ffffff;
+        font-size: 24px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let elm = $(".box");
+        $(elm).each(function (index) {
+          $(this).on("mousewheel", function () {
+            // let delta = 0;
+            // let은 중복해서 선언하면 안됨
+
+            console.log(event.wheelDelta);
+            let delta = event.wheelDelta / 120;
+            let moveTop = $(window).scrollLeft();
+            console.log(moveTop);
+            let elmSelecter = $(elm).eq(index);
+            console.log(index);
+            // 마우스휠을 위에서 아래로
+            if (delta < 0) {
+              if ($(elmSelecter).next() != undefined) {
+                try {
+                  moveTop = $(elmSelecter).next().offset().left;
+                } catch (e) {}
+                // 끝으로가면 정의되어있지 않다고 뜨니까 catch구문으로 보내주는 것
+              }
+              // 마우스휠을 아래에서 위로
+            } else {
+              if ($(elmSelecter).prev() != undefined) {
+                try {
+                  moveTop = $(elmSelecter).prev().offset().left;
+                } catch (e) {}
+              }
+            }
+            // 화면 이동 0.8초(800)
+            $("html, body").stop().animate({ scrollLeft: moveTop }, 800);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <body>
+      <div class="boxwrap">
+        <div class="box" style="background-color: red">1</div>
+        <div class="box" style="background-color: orange">2</div>
+        <div class="box" style="background-color: yellow">3</div>
+        <div class="box" style="background-color: green">4</div>
+        <div class="box" style="background-color: blue">5</div>
+        <div class="box" style="background-color: indigo">6</div>
+        <div class="box" style="background-color: violet">7</div>
+      </div>
+    </body>
+  </body>
+</html>

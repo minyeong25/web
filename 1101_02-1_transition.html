@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        body > ul {
+            width: 115px;
+            margin: 100px auto;
+        }
+        body > ul > li {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .over {
+            position: absolute;
+            /* left: 0; */
+            right: 0;
+            top: 0;
+            transition: 1s;
+        }
+        .card:hover .over{
+            /* right: -115px;
+            top: -94px; */
+            /* left: 100%;
+            top: 100%; */
+            right: -115px;
+            top:-94px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <ul class="card">
+                <li class="over"><img src="images/menu1_over.jpg" alt="초등"></li>
+                <li class="menu"><img src="images/menu1.jpg" alt="초등"></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="card">
+                <li class="over"><img src="images/menu2_over.jpg" alt="중등"></li>
+                <li class="menu"><img src="images/menu2.jpg" alt="중등"></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="card">
+                <li class="over"><img src="images/menu3_over.jpg" alt="고등"></li>
+                <li class="menu"><img src="images/menu3.jpg" alt="고등"></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="card">
+                <li class="over"><img src="images/menu4_over.jpg" alt="성인"></li>
+                <li class="menu"><img src="images/menu4.jpg" alt="성인"></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="card">
+                <li class="over"><img src="images/menu5_over.jpg" alt="브랜드상품"></li>
+                <li class="menu"><img src="images/menu5.jpg" alt="브랜드상품"></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

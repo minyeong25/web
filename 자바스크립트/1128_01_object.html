@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oibject</title>
+    <script>
+        // const person = {first:"ha", last:"sook",age:20, fullname:function() {return his.first+" +this.last"}};
+        const person = {
+            firstname: "minyeong",
+            lastname:  "kim",
+            age: "20",
+            fullname: function() {
+                return this.firstname+" "+this.lastname;
+            }
+        };
+        // let firstname = "minyeong";
+        // let lastname = "kim";
+        // let age = 20;
+        // let full = firstname + " " + lastname;
+
+        document.write(person.fullname()+"<br>");
+        document.write(person.fullname+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 웹페이지</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, Helvetica, "맑은 고딕", sans-serif;
+      }
+      header {
+        background-color: greenyellow;
+      }
+      .head {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 0;
+      }
+      h2,
+      ul li a {
+        color: #fff;
+      }
+      h2 {
+        width: 30%;
+      }
+      .menu {
+        display: flex;
+        width: 50%;
+      }
+      .menu li {
+        width: 20%;
+      }
+      ul li a {
+        display: block;
+        width: 100%;
+      }
+      input[search] {
+        width: 20%;
+      }
+      @media screen and (max-width: 480px) {
+        .head {
+          width: 80%;
+          flex-direction: column;
+          text-align: center;
+        }
+        h2,
+        .menu {
+          width: 100%;
+          padding: 20px 0;
+        }
+        input {
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <h2>Web Design</h2>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">blog</a></li>
+        </ul>
+        <input type="search" placeholder="검색" />
+      </div>
+    </header>
+  </body>
+</html>

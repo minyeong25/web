@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할당연산자</title>
+    <script>
+        // const a = 10; //이렇게 쓰면 오류남 왜..?->할당이 되기 때문? 값이 계속 바뀌어서..
+        let a = 10;
+        let b = 10;
+        // const b = 10; //이거는 괜찮음 b의 값은 바뀌지 않으니깐
+        a += b; //a = a + b;
+        document.write("a :" +a+ "<br>");
+        a -= b; //a = a - b;
+        document.write("a :" +a+ "<br>");
+        a *= b; //a = a * b;
+        document.write("a :" +a+ "<br>");
+        a /= b; //a = a / b;
+        document.write("a :" +a+ "<br>");
+        a %= b; //a = a % b;
+        document.write("a :" +a+ "<br>");
+        a += b; //a = a + b;
+        document.write("a :" +a+ "<br>");
+        a **= b; //a = a ** b;
+        document.write("a :" +a+ "<br>");
+        let text1 ="자바스크립트";
+        let text2 ="javascript";
+        let text3;
+        text1 += text2;
+        console.log("text1 : " + text1)
+        text3 = text1 + " " + text2;
+        console.log("text3 : " + text3)
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

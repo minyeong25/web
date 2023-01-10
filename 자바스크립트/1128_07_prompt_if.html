@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+        let score = prompt("당신의 점수를 입력해주세요","0");
+        let msg = confirm("당신이 입력한 점수는 "+score+" 점 맞습니까?");
+        let result;
+        if(score >= 90) {
+            result = "A";
+        }else if(score >= 80) {
+            result = "B";
+        }else if(score >= 70) {
+            result = "C";
+        }else if(score >= 60) {
+            result = "D";
+        } else {
+            result = "F";
+        }
+        document.write("당신의 학점은 "+ result +" 학점입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

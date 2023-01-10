@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        div {
+            width: 300px;
+            height: 350px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5) ;
+            float: left;
+        }
+        div p {
+            transform: translateY(-15px);
+        }
+        div img {
+            width: 100%;
+            height: 300px;
+            transform: scale(0.9);
+        }
+        .one {
+            transform: rotate(-5deg);
+        }
+        .two {
+            transform: rotate(5deg);
+        }
+        .three {
+            transform: rotate(-5deg);
+        }
+        .four {
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <img src="images/photo1.jpg" alt="photo1">
+        <p>그린컴퓨터아카데미</p>
+    </div>
+
+    <div class="two">
+        <img src="images/photo2.jpg" alt="photo1">
+        <p>그린컴퓨터아카데미</p>
+    </div>
+    <div class="three">
+        <img src="images/photo3.jpg" alt="photo1">
+        <p>그린컴퓨터아카데미</p>
+    </div>
+    <div class="four">
+        <img src="images/photo4.jpg" alt="photo1">
+        <p>그린컴퓨터아카데미</p>
+    </div>
+    
+</body>
+</html>

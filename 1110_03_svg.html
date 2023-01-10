@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        svg:hover {
+            animation: ani 2s infinite;
+        }
+        @keyframes ani {
+            0% {stroke-dashoffset: 1200;}
+            100% {stroke-dashoffset: 0;}
+        }
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 30px;
+            line-height: 50px;
+        }
+        div p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div><p>svg<br>애니메이션</p></div>
+    <svg height="400" width="400">
+        <rect x="10" y="10" width="300" height="300" fill="none" stroke-width="10" stroke="black"  stroke-linecap="square" stroke-dasharray="1200"/>
+    </svg>
+</body>
+</html>

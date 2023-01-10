@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        p{
+            height: 100px;
+        }
+        #grad1{
+            background: linear-gradient(red,blue);
+        }
+        #grad2{
+            background: linear-gradient(to right, red,blue); 
+            /* <!-- to left, top, bottom 등 가능 --> */
+        }
+        #grad3{
+            background: linear-gradient(45deg, red,blue); 
+            /* <!-- 각도는 deg가 나와야함, 음의 값도 가능 --> */
+        }
+        #grad4{
+            background: linear-gradient(red 50%,blue 75%, green 90%); 
+            /* <!-- 50%지점까진 완전한 레드 50~75%는 레드랑 블루가 75~90%은 블루랑 그린 마지막 10% 완전한 그린--> */
+        }
+        #grad5{
+            background: linear-gradient(rgba(255,0,0,1), rgba(255,0,0,0)); 
+            /* <!-- 알파값이 1/0 불투명/투명 의미--> */
+        }
+        #grad6{
+            background: repeating-linear-gradient(red, blue 10%, green 20%);
+        }
+        #grad7{
+            background: radial-gradient(red, blue);
+        }
+        #grad8{
+            background: radial-gradient(circle, red, blue);
+        }
+        #grad9{
+            background: radial-gradient(circle, red 10%, blue 50%);
+        }
+        #grad10{
+            background: repeating-radial-gradient(circle,red, blue 10%, green 20%);
+        }
+       
+    </style>
+</head>
+<body>
+    <p id="grad1">1</p>
+    <p id="grad2">2</p>
+    <p id="grad3">3</p>
+    <p id="grad4">4</p>
+    <p id="grad5">5</p>
+    <p id="grad6">6</p>
+    <p id="grad7">7</p>
+    <p id="grad8">8</p>
+    <p id="grad9">9</p>
+    <p id="grad10">10</p>
+
+</body>
+</html>

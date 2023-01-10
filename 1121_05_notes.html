@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <title>notes</title>
+    <style>
+        p {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 14px;
+        }
+        div p:first-of-type {
+            background: rgb(255, 222, 222);
+            border-left: 5px solid rgb(246, 63, 63);
+        }
+        div p:nth-of-type(2) {
+            background: rgb(218, 255, 234);
+            border-left: 5px solid rgb(63, 246, 112);
+        }
+        div p:nth-of-type(3) {
+            background: rgb(222, 255, 254);
+            border-left: 5px solid rgb(63, 155, 246);
+        }
+        div p:nth-of-type(4) {
+            background: rgb(255, 250, 219);
+            border-left: 5px solid rgb(246, 237, 63);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>Notes</h2>
+        <p><strong>Danger!</strong> Some text...</p>
+        <p><strong>Success!</strong> Some text...</p>
+        <p><strong>Info!</strong> Some text...</p>
+        <p><strong>Warning!</strong> Some text...</p>
+    </div>
+</body>
+</html>

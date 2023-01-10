@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Icon Buttons</title>
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+        }
+        .btn li:hover, .btn_txt li:hover {
+            background: rgb(0, 170, 255);
+        }
+        .btn li {
+            background: rgb(105, 205, 255);
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 50px;
+            /* cursor: pointer; */
+        }
+        p {
+            font-size: 20px;
+        }
+        .fa-solid {
+            color: #fff;
+            font-size: 18px;
+        }
+        .btn_txt li {
+            background: rgb(105, 205, 255);
+            width: 120px;
+            height: 50px;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 50px;
+            /* cursor: pointer; */
+        }
+        .btn_txt li span {
+            color: #fff;
+            font-family: Arial, '맑은 고딕', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Icon Buttons</h2>
+    <div class="btn">
+        <p>Icon buttons:</p>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house-user"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-folder"></i></a></li>
+        </ul>
+    </div>
+    <div class="btn_txt">
+        <p>Icon buttons with text:</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Favorite</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>Folder</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

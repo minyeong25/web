@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <title>fixed-menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+        }
+        .menu {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        ul li:hover a {
+            background: #ddd;
+        }
+        li:first-child a {
+            background: rgb(0, 0, 88);
+        }
+        li:nth-child(2) a {
+            background: rgb(22, 167, 251);
+        }
+        li:nth-child(3) a {
+            background: red;
+        }
+        li:nth-child(4) a {
+            background: rgb(0, 62, 148);
+        }
+        li:nth-child(5) a {
+            background: red;
+        }
+        .contents {
+            height: 1500px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
+    <div class="contents">
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+        <p>This is ...</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        //선택한 개체의 안에 들어있는 내용 선택자?
+        //$(".container li:empty").text("blank");
+        //$(".container li:contains(cs)").text("blank");
+        //클래스가 아니라 개체의 내용을 가져다가 텍스트를 바꿔주는것임(컨텐츠를 바꿔줌)
+        //$(".container:has(p)").text("blank");
+        //.container 클래스 하위에 p요소가 있을 경우 .container클래스를 선택-> container 전체를 blank로 바꾼다는 뜻
+        //노드구조변경시작
+        //$("ul").append('<li class="page">page</li>');
+        //append()메소드는 뒤에감
+        //$("ul").prepend('<li class="page">page</li>');
+        $('<li class="page">page</li>').appendTo("ul");
+        $('<li class="page">page</li>').prependTo("ul");
+        //$(".container").clone().appendTo("body");
+        //body태그 자식요소 뒤에 container가 또 생김
+        $(".container").clone().prependTo("body");
+        //$(".container p").wrap('<div class="in"></div>');
+        //$(".container p").wrapAll('<div class="in"></div>');
+        //$(".container p").wrapInner('<span class="in"></span>');  //p태그 안에 생김
+        // $(".html").after('<li class="new">new</li>');
+        // $(".html").before('<li class="new">new</li>');
+        $('<li class="new">new</li>').insertAfter(".html");
+        $('<li class="new">new</li>').insertBefore(".html");
+        $(".cs").replaceWith('<li class="replace_css">대체된서식</li>');
+        $('<li class="replace_css">대체된서식</li>').replaceAll(".javascript");
+        //개체 선택 후 대상을 작성
+      });
+    </script>
+    <title>jQuery 속성선택자</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="html">html</li>
+        <li class="cs">css</li>
+        <li class="cs3">css3</li>
+        <li class="javascript">javascript</li>
+        <li class="jQuery">jQuery</li>
+        <li class="blank"></li>
+      </ul>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그입니다.</p></div>
+    <div class="div1">
+      <p>텍스트와 inline속성을 가진 요소만 올 수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>

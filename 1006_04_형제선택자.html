@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제선택자</title>
+
+    <style>
+        /* ul li span + p {
+            color: #f00;    
+        } */
+        ul li p ~ span {
+            color: #f00;    
+        }
+      
+
+   </style>
+
+
+</head>
+
+<body>
+   <ul>
+    <li>
+        <p>문단태그</p>
+        <span>span태그</span>
+        <p>문단태그</p>
+        <span>span태그</span>
+        <p>문단태그</p>
+        <span>span태그</span>
+        <p>문단태그</p>
+        <ul>
+            <li>리스트</li>
+            <span>span태그</span>
+        </ul>
+    </li>
+   </ul>
+ 
+</body>
+</html>

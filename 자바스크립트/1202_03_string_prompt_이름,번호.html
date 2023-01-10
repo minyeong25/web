@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영문 대문자로, 연락처 뒷자리 *으로</title>
+    <script>
+      let name = prompt("영문이름을 입력해주세요");
+      let phone = prompt("연락처를 입력해주세요");
+      document.write(
+        name.toUpperCase() +
+          "<br>" +
+          phone.replace(phone.substr(-4, 4), "****") +
+          "<br>"
+      );
+
+      document.write(
+        name.toUpperCase() +
+          "<br>" +
+          phone.slice(0, phone.length - 4) +
+          "****" +
+          "<br>"
+      );
+
+      document.write(
+        name.toUpperCase() +
+          "<br>" +
+          phone.substring(0, phone.length - 4) +
+          "****" +
+          "<br>"
+      );
+
+      document.write(
+        name.toUpperCase() + "<br>" + phone.substring(0, phone.length - 4),
+        "****" + "<br>"
+      );
+
+      document.write(
+        name.toUpperCase() +
+          "<br>" +
+          phone.replace(phone.slice(-4), "****") +
+          "<br>"
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

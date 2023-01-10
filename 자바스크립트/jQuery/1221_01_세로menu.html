@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>세로 메뉴</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 1em Arial, 돋움, Doctum, sans-serif;
+      }
+      ul#navi {
+        width: 200px;
+        margin: 0 auto;
+        text-indent: 10px;
+      }
+      div.title {
+        height: 35px;
+        line-height: 35px;
+        cursor: pointer;
+        background: #9ab92e;
+      }
+      div.title.on {
+        background: #6c8532;
+      }
+      .sub li {
+        height: 35px;
+        line-height: 35px;
+        background: #f4f4f4;
+        cursor: pointer;
+      }
+      #navi > li {
+        margin-bottom: 3px;
+      }
+      .sub li a {
+        display: block;
+        width: 100%;
+        /* li의 100% li width 없으면 .sub 계속 부모한테가서 #navi 크기로 간 것 */
+        color: #000;
+      }
+      .sub li a:hover {
+        background: #cf0;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        //step1
+        /* $(".sub").hide();
+              //$(".sub").css("display","none"); 이랑 같음
+              $(".title").click(function () {
+                $(".sub").hide();
+                $(this).next().show();
+                //$(".sub").css("display","block"); 이랑 같음
+              }); */
+
+        //step2 토글처럼
+        /* $(".sub").css("display", "none");
+              $(".title").click(function () {
+                if ($(this).next().css("display") == "none") {
+                  $(".sub").slideUp();
+                }
+                $(this).next().slideToggle();
+                $(".title").removeClass("on");
+                $(this).addClass("on");
+              }); */
+
+        //step3
+        /* $(".sub").hide();
+        $(".title").click(function () {
+          $(".sub").each(function () {
+            if ($(this).css("display") == "block") {
+              $(this).slideUp();
+            }
+          });
+          $(this).next().slideDown();
+          $(".title").removeClass("on");
+          $(this).addClass("on");
+        }); */
+
+        //step4
+        /* $(".sub").hide();
+        $(".title").click(function () {
+          if ($(this).hasClass("on") == false) {
+            $(".title").removeClass("on");
+            $(this).addClass("on");
+            $(".sub").slideUp();
+            //다른 sub가 열려있으면 올라오게
+            $(this).next().slideDown();
+          } else {
+            $(this).removeClass("on");
+            $(this).next().slideUp();
+          }
+        }); */
+
+        //step 5
+        /* $(".sub").hide();
+        let current;
+        let num;
+        //변수는 만들고 초기값은 안넣었음.
+        function firstmenu() {
+          $("#navi > li").eq(current).find("ul").slideDown();
+        }
+        //함수를 호출하지 않으면 작동?이 안됨 아직 호출안함
+        //firstmenu();
+        //이제 호출해서 됨
+        function init(n) {
+          current = n;
+          num = n;
+          setTimeout(firstmenu, 1000);
+        }
+        init(0);
+        $(".title").click(function () {
+          if ($(this).parent("li").index() != num) {
+            num = $(this).parent("li").index();
+            $(".sub").slideUp();
+            $(this).next().slideDown();
+          } else {
+            $(".sub").slideUp();
+          }
+        }); */
+
+        //step6
+        $(".sub").hide();
+        let current;
+        function init(n) {
+          current = n;
+          setTimeout(firstmenu, 1000); //한번 실행
+        }
+        function firstmenu() {
+          $("#navi > li").eq(current).find("ul").slideDown();
+          $(".title").eq(current).addClass("on");
+        }
+        init(0);
+        $(".title").click(function () {
+          //   num = $(this).parent("li").index();
+          //   console.log(num);
+          if ($(this).hasClass("on") == false) {
+            $(".title").removeClass("on");
+            $(this).addClass("on");
+            $(".sub").slideUp();
+            $(this).next().slideDown();
+          } else {
+            $(this).removeClass("on");
+            $(this).next().slideUp();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="navi">
+      <li>
+        <div class="title">title</div>
+        <ul class="sub">
+          <li><a href="#">sub11</a></li>
+          <li><a href="#">sub12</a></li>
+          <li><a href="#">sub13</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="title">title</div>
+        <ul class="sub">
+          <li><a href="#">sub21</a></li>
+          <li><a href="#">sub22</a></li>
+          <li><a href="#">sub23</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="title">title</div>
+        <ul class="sub">
+          <li><a href="#">sub31</a></li>
+          <li><a href="#">sub32</a></li>
+          <li><a href="#">sub33</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

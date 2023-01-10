@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>작은 리스트 패턴</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 1em Arial, "맑은 고딕", 돋움, Doctum, sans-serif;
+      }
+      #box_a {
+        height: 400px;
+        background: #aaa;
+      }
+      .list_man {
+        margin: 0 auto;
+        padding-top: 50px;
+        width: 80%;
+      }
+      .list_man li {
+        float: left;
+        margin: 1%;
+        /* margin 포함하면(좌우1%씩하면 2%) 20%가 되니까 5개가 들어가도록 */
+        width: 18%;
+        background: #fff;
+      }
+      @media screen and (max-width: 1024px) {
+        .list_man {
+          width: 95%;
+        }
+        .list_man li {
+          /* margin: 1%; */
+          /* 위에 서식 그대로 상속받기 때문에 같은 값은 다시 지정하지 않아도 됨! */
+          width: 23%;
+          /* 4개가 들어가도록 25%씩 */
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .list_man li {
+          /* margin: 1%; */
+          width: 31.333%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .list_man li {
+          /* margin: 1%; */
+          width: 48%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box_a">
+      <ul class="list_man">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+        <li>i</li>
+        <li>j</li>
+      </ul>
+    </div>
+  </body>
+</html>

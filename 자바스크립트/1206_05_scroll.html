@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Scroll Event</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+  </head>
+  </script>
+  <body>
+    <script>
+        window.onscroll = function() {
+            let ht = document.documentElement.scrollTop;
+            console.log(ht);
+            if(ht >= 100 && ht < 1000) {
+                document.querySelector("body").style.backgroundColor="#ccc";
+            }else if (ht >= 1000 && ht <2000) {
+                document.querySelector("body").style.backgroundColor="#f00";
+            }else {
+                document.querySelector("body").style.backgroundColor="#fff";
+            }
+        }
+    </script>
+  </body>
+</html>

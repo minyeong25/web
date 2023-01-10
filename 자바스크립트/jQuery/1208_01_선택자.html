@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #p01 {
+        color: #0f0;
+        background-color: #00f;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <!-- <script src="../../js/test.js"></script> -->
+    <script>
+      // $(document).ready(function () {
+      //   $("p").css("color", "#f00");
+      //  });
+
+      // 더 간단하게 작성하기, 태그? 선택자
+      // $(function () {
+      //   $("p").css("color", "#f00");
+      // });
+
+      //id 선택자, class 선택자
+      $(function () {
+        // $("#p01").css("color", "#f00");
+        // $("p.txt").css("color", "#f00");
+        // $("#p01,.txt").css("color", "#f00");
+        $("#p01")
+          .css("color", "#f00")
+          .css("fontSize", "24px")
+          .css("backgroundColor", "#ff0");
+        //속성 하나에 메소드 각각 쓴 것 ""무조건 작성해야함
+        $(".txt").css({
+          color: "#00f",
+          "font-size": "50px",
+          backgroundColor: "pink",
+        });
+        //여러 속성을 한번에 작성. 콜론 반드시 써야함 속성값이 하나의 단어면 ""필요없음 두개의 단어면"안에"써야함->대문자로 써서 ""없이 써도됨
+      });
+      // p태그의 class만 선택하고 싶으면 p.txt div.txt이런식으로
+      // 인라인 방식으로 적용시키는 것임->가장 강력.
+      // css메소드 중첩해서 사용 가능
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <p>jquery</p>
+    <p id="p01">p태그 아이디</p>
+    <p class="txt">p태그 클래스</p>
+    <div class="txt">div 태그</div>
+
+    <!-- 바디태그가 다 로딩이 되고 난 후 스크립트가 들어가면 위에처럼 작성안해도 됨 실행하고자하는 실행문만 넣으면 됨 -->
+    <!-- <script>
+      $("p").css("color", "#f00");
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_grid grid-area사용</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 200px 100px;
+
+        }
+        .header {
+            grid-column: 1 / 4;
+            display: grid;
+            grid-template-columns: 200px auto;
+        }
+        .header .logo {
+            background: #f00 url(images/logo.jpg) no-repeat center;  
+        }
+        .header .menu {
+            background: #0f0;
+        }
+        .header .menu > ul {
+            display: flex;
+            width: 700px;
+            margin-top: 30px;
+            margin-left: 250px;
+        }
+        .header .menu > ul:hover li ul {
+            height: 140px;
+        }
+        .header .menu > ul li:hover > a {
+            background: #000;
+            color: #fff;
+        }
+        .header .menu > ul > li {
+            width: 25%;
+            position: relative;
+        }
+        .header .menu > ul > li > a {
+            text-align: center;
+            display: block;
+            background: #fff;
+            color: #000;
+            height: 40px;
+            line-height: 40px;
+            font-weight: 1000;
+        }
+        .header .menu li ul {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+        .header .menu li ul li a {
+            text-align: center;
+            display: block;
+            background: #fff;
+            color: #000;
+        }
+        .slide {
+            grid-column: 1 / 4;
+            background: #bbb;
+        }
+        .content1 {
+            background: #ccc;
+        }
+        .content1 input[type=radio] {
+            display: none;
+        }
+        .content1 .btntitle {
+            display: flex;
+        }
+        .content1 .btntitle li {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #000;
+            background: #ddd;
+            text-align: center;
+        }
+        .content1 .btntitle li label {
+            display: block;
+            cursor: pointer;
+        }
+        #notice:checked ~ .btntitle li:first-child {
+            background: #fff;
+            border-bottom: none;
+            border-right: none;
+        }
+        #gallery:checked ~ .btntitle li:last-child {
+            background: #fff;
+            border-bottom: none;
+            border-left: none;
+        }
+        .content1 .con {
+            background: #fff;
+        }
+        .content2 {
+            background: #ddd;
+        }
+        .content3 {
+            background: #eee;
+        }
+        .footer {
+            grid-column: 1 / 4;
+            display: grid;
+            grid-template-columns: auto 200px;
+        }
+        .footer .logo {
+            background: #f00;
+            grid-area: 1 / 2 / 3 / 3;
+        }
+        .menu {
+            background: #0f0;
+        }
+        .copyright {
+            background: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">탑</a>
+                        <ul>
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul>
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul>
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide">slide</div>
+        <div class="content1">
+            <input type="radio" name="board" id="notice" checked>
+            <input type="radio" name="board" id="gallery">
+            <ul class="btntitle">
+                <li><label for="notice">공지사항</label></li>
+                <li><label for="gallery">갤러리</label></li>
+            </ul>
+            <ul class="con">
+                
+            </ul>
+        </div>
+        <div class="content2">content2</div>
+        <div class="content3">content3</div>
+       <div class="footer">
+            <div class="logo"></div>
+            <div class="menu"></div>
+            <div class="copyright"></div>
+       </div>
+    </div>
+</body>
+</html>

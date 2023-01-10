@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        let ht = $(window).height();
+        $("section").height(ht);
+        //let sec_ht = $("section").height();
+        $(window).resize(function () {
+          let ht = $(window).height();
+          $("section").height(ht);
+        });
+        $(window).scroll(function () {
+          let t = $(this).scrollTop();
+          if (t < ht) {
+            $("section").removeClass();
+          } else if (t >= ht && t < ht * 2) {
+            $("section").eq(1).addClass("on");
+            $("section").eq(2).addClass("on1").css("top", ht);
+            $("section").eq(3).addClass("on1").css("top", ht);
+          } else if (t >= ht * 2 && t < ht * 3) {
+            $("section").eq(1).removeClass("on");
+            $("section").eq(2).removeClass("on1").addClass("on").css("top", 0);
+            $("section").eq(3).addClass("on1").css("top", ht);
+          } else if (t >= ht * 3) {
+            $("section").eq(1).removeClass();
+            $("section").eq(2).removeClass();
+            $("section").eq(3).removeClass();
+          }
+        });
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 100%;
+      }
+      section:first-child {
+        background: #f00;
+      }
+      section:nth-child(2) {
+        background: #ff0;
+      }
+      section:nth-child(3) {
+        background: #f0f;
+      }
+      section:nth-child(4) {
+        background: #00f;
+      }
+      section.on {
+        position: fixed;
+        top: 0;
+      }
+      section.on1 {
+        position: relative;
+        z-index: 2;
+      }
+      footer {
+        background: #ccc;
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>하나</section>
+    <section>둘</section>
+    <section>셋</section>
+    <section>넷</section>
+    <footer>footer</footer>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal popup</title>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#modal").hide();
+        $("button").click(function () {
+          $("#modal").show();
+        });
+        $("#close").click(function (e) {
+          e.preventDefault;
+          $("#modal").hide();
+          location.href = "http://www.naver.com";
+        });
+      });
+    </script>
+    <style>
+      #modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      #modal .pop {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>모달 팝업창 만들기</h1>
+    <button>클릭</button>
+    <div id="modal">
+      <div class="pop">
+        모달창입니다
+        <a href="#" id="close">close</a>
+      </div>
+    </div>
+  </body>
+</html>

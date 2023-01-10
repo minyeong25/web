@@ -1,0 +1,27 @@
+@charset "utf-8";
+@font-face {
+  font-family: PoiretOne;
+  src: url(../webfonts/PoiretOne-Regular.woff) format("PoiretOne");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: PoiretOne, Arial, 돋움, Doctum;
+}
+.wrap {
+  width: 1600px;
+}
+.wrap > .left {
+  width: 20%;
+}
+.wrap > .right {
+  width: 80%;
+}

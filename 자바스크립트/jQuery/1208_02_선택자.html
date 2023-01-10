@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        //$("li:first").css("border", "1px solid #f00");
+        // $("li:first-child").css("border", "1px solid #f00");
+        // $("li:last").css("border", "1px solid #f00");
+        // $("li:even").css("border", "1px solid #f00");
+        //인덱스 번호는 0부터 시작
+        // $("div:even").css("border", "1px solid #f00");
+        // $("div:odd").css("border", "1px solid #f00");
+        // $("p:first-child").css("border", "1px solid #f00");
+        //첫번째이면서 p여야만 함.
+        // $(".container p:first-of-type").css("border", "1px solid #f00");
+        // $("p:nth-last-child(1)").css("border", "1px solid #f00");
+        //자식 중 뒤에서부터 찾는데 p태그인 것을  찾는것
+        // $("p:only-child").css("border", "1px solid #f00");
+        //p태그를 가지고 있는데 자식이 하나 인 것
+        // $("p:only-of-type").css("border", "1px solid #f00");
+        //자식이 여러개여도 p가 하나면 됨
+        // $(".container > p").css("border", "1px solid #f00");
+        // $("ul + p").css("border", "1px solid #f00");
+        //ul을 기준으로 바로 뒤에나오는 형제 (next)
+        // $("ul ~ p").css("border", "1px solid #f00");
+        //ul을 기준으로 뒤에나오는 모든 형제
+        // $("li:eq(0)").css("border", "1px solid #f00");
+        //eq는 인덱스 번호에 있는 목록을 찾아줌
+        // $("li:gt(1)").css("border", "1px solid #f00");
+        //gt는 인덱스 번호보다 큰 목록을 찾아줌 greater than
+        // $("li:lt(1)").css("border", "1px solid #f00");
+        //lt는 인덱스 번호보다 작은 목록을 찾아줌
+        // $("li:not(:lt(1))").css("border", "1px solid #f00");
+        //not은 인덱스 번호가 1보다 작은애가 아닌 것
+        $(":header").css("border", "1px solid #f00");
+      });
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <h1>h1태그</h1>
+    <h2>h2태그</h2>
+    <h3>h3태그</h3>
+    <h4>h4태그</h4>
+    <h5>h5태그</h5>
+    <h6>h6태그</h6>
+    <div class="container">
+      <ul>
+        <li>
+          html
+          <p>웹페이지의 구조를 만듭니다.</p>
+        </li>
+        <li>css</li>
+        <li>css3</li>
+        <li>javascript</li>
+        <li>jQuery</li>
+      </ul>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그입니다.</p></div>
+    <div class="div1">
+      <p>텍스트와 inline속성을 가진 요소만 올 수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>

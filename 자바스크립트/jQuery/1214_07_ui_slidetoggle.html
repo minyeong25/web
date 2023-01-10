@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 600px;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          let effect = $(this).attr("data-ease");
+          $("div").slideToggle(1000, effect);
+        });
+
+        //처음 했던 거
+        // $(".swing").click(function () {
+        //   $("img").slideToggle(1000, "swing");
+        // });
+        // $(".linear").click(function () {
+        //   $("img").slideToggle(1000, "linear");
+        // });
+        // $(".ease_out_quart").click(function () {
+        //   $("img").slideToggle(1000, "easeOutQuart");
+        // });
+        // $(".ease_out_elastic").click(function () {
+        //   $("img").slideToggle(1000, "easeOutElastic");
+        // });
+        // $(".ease_out_back").click(function () {
+        //   $("img").slideToggle(1000, "easeOutBack");
+        // });
+        // $(".ease_out_bounce").click(function () {
+        //   $("img").slideToggle(1000, "easeOutBounce");
+        // });
+
+        /* with T
+        $("button")
+          .eq(0)
+          .click(function () {
+            $("div").slideUp(1000, "swing", function () {
+              $(this).slideDown(1000, "swing");
+            });
+          });
+        $("button")
+          .eq(1)
+          .click(function () {
+            $("div").slideUp(1000, "linear", function () {
+              $(this).slideDown(1000, "linear");
+            });
+          });
+          //이렇게 하면 갯수가 많아질 경우 하기 힘듦
+
+          //slideup,down
+          $("button").click(function () {
+          let name = $(this).text();
+          $("div").slideUp(1000, name, function(){
+            $(this).slideDown(1000, name);
+          });
+          */
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <img src="../images/photo1.jpg" alt="photo1" />
+    </div>
+    <button data-ease="swing">스윙</button>
+    <button data-ease="linear">리니어</button>
+    <button data-ease="easeOutQuart">OutQuart</button>
+    <button data-ease="easeOutElastic">OutElastic</button>
+    <button data-ease="easeOutBack">OutBack</button>
+    <button data-ease="easeOutBounce">OutBounce</button>
+  </body>
+</html>

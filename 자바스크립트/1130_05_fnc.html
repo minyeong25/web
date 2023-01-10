@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documnet</title>
+    <script>
+      function a() {
+        // alert("예, 담배를 피웁니다.");
+        document.querySelector("#content").style.backgroundColor = "red";
+        // 제일 처음오는 ("p")태그만(클래스도 처음것만) 선택함.
+      }
+      function b() {
+        alert("아니오, 담배를 피우지 않습니다.");
+      }
+    </script>
+  </head>
+  <body>
+    <p class="p01">담배를 피우십니까?</p>
+    <button onclick="a()">예</button>
+    <button onclick="b()">아니오</button>
+    <p class="p01" id="content">문단태그</p>
+  </body>
+</html>

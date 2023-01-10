@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <!-- all.css도 있어야하지만 같은경로에 웹폰트도 있어야함 -->
+    <title>Icon Buttons</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+        .btn {
+            padding: 10px 15px;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            background: #ccc;
+            border: none;
+        }
+        .btn:hover {
+            background: #ddd;
+        }
+        .btn span {
+            transition: all 0.5s;
+            position: relative;
+        }
+        .btn span::after {
+            position: absolute;
+            right: -30px;
+            content: "\00BB";
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .btn:hover span::after {
+            opacity: 1;
+            right: 0px;
+        }
+        .btn:hover span {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 버튼태그는 인라인 속성임 -->
+    <div>
+        <button class="btn"><i class="fa-solid fa-house-user"></i></button>
+        <button class="btn"><i class="fa-solid fa-bars"></i></button>
+        <button class="btn"><i class="fa-solid fa-trash-can"></i></button>
+        <button class="btn"><i class="fa-solid fa-xmark"></i></button>
+        <button class="btn"><i class="fa-solid fa-folder-open"></i></button>
+    </div>
+    <div>
+        <button class="btn"><i class="fa-solid fa-house-user"> </i> <span>Home</span></button>
+        <button class="btn"><i class="fa-solid fa-bars"></i> <span>Menu</span></button>
+        <button class="btn"><i class="fa-solid fa-trash-can"></i> <span>Trash</span></button>
+        <button class="btn"><i class="fa-solid fa-xmark"></i> <span>Close</span></button>
+        <button class="btn"><i class="fa-solid fa-folder-open"></i> <span>Folder</span></button> 
+    </div>
+</body>
+</html>

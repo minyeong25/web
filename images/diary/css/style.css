@@ -1,0 +1,316 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Rammetto+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Noto Sans KR", Arial, sans-serif;
+}
+#wrap {
+}
+header {
+  width: 1170px;
+  margin: 0 auto;
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+  height: 82px;
+}
+header .left {
+  height: 82px;
+  line-height: 82px;
+}
+header .left img {
+  height: 52px;
+  vertical-align: middle;
+}
+header .right ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header .right a:hover {
+  color: #333;
+}
+header .right a {
+  display: block;
+  color: #000;
+  line-height: 82px;
+  padding: 0 10px;
+  font-weight: 500;
+}
+header .gnb_wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding-left: 10px;
+}
+header .gnb {
+  width: 60%;
+}
+header .gnb a {
+  font-weight: 500;
+}
+header .search {
+  position: relative;
+  width: 30%;
+  text-align: right;
+  line-height: 60px;
+}
+header #search_bar:focus {
+  outline: none;
+}
+header #search_bar {
+  height: 20px;
+  line-height: 20px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.fa-magnifying-glass {
+  position: absolute;
+  right: 15px;
+  top: 23px;
+  color: black;
+}
+header .gnb ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .gnb ul li {
+  text-align: center;
+}
+header .gnb ul li a {
+  display: block;
+  color: #000;
+  line-height: 60px;
+}
+header .gnb ul li:first-child a {
+  color: #ff8a35;
+}
+/* header 끝 */
+
+#slide {
+  width: 1170px;
+  height: 658px;
+  margin: 0px auto;
+}
+#slide div {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/banner.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+#content1 {
+  width: 1170px;
+  /* height: 590px; */
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+#content1 .left {
+  width: 40%;
+  color: #646464;
+}
+#content1 .left .text_wrap h2 {
+  margin-bottom: 30px;
+}
+#content1 .left .text_wrap p {
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+}
+#content1 .left .img {
+  height: 390px;
+  width: 390px;
+  margin: 30px;
+  background-image: url(../images/banner.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+#content1 .right {
+  width: 60%;
+}
+#content1 .right ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 217px 1fr;
+  grid-auto-rows: 217px 1fr;
+  grid-column-gap: 18px;
+  grid-row-gap: 18px;
+}
+#content1 .right ul li {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  /* transition: 0.5s; */
+}
+#content1 .right ul li p {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+#content1 .right ul li strong {
+  color: #656565;
+}
+#content1 .right ul li span a {
+  font-size: 14px;
+  color: #00a6ff;
+}
+#content1 .right ul li span a.price {
+  text-decoration: line-through;
+  padding-left: 5px;
+  color: #bbb;
+  font-size: 11px;
+}
+#content1 .right ul li .rect {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+#content1 .right ul li .sale {
+  background: #f00;
+  border: none;
+  color: #fff;
+}
+#content1 .right ul li .best {
+  color: #f00;
+}
+#content1 .right ul li:hover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#content1 .right ul li:first-child {
+  background-image: url(../images/handydiary.JPG);
+}
+#content1 .right ul li:first-child:hover {
+  background-image: url(../images/handyinner.JPG);
+}
+#content1 .right ul li:nth-child(2) {
+  background-image: url(../images/craft.JPG);
+}
+#content1 .right ul li:nth-child(2):hover {
+  background-image: url(../images/craft-2.JPG);
+}
+#content1 .right ul li:nth-child(3) {
+  background-image: url(../images/diary.JPG);
+}
+#content1 .right ul li:nth-child(3):hover {
+  background-image: url(../images/diary-2.JPG);
+}
+#content1 .right ul li:nth-child(7) {
+  background-image: url(../images/sticker.JPG);
+}
+#content1 .right ul li:nth-child(7):hover {
+  background-image: url(../images/sticker-2.JPG);
+}
+#content1 .right ul li:nth-child(8) {
+  background-image: url(../images/ppnote.JPG);
+}
+#content1 .right ul li:nth-child(8):hover {
+  background-image: url(../images/ppnote-2.JPG);
+}
+#content1 .right ul li:nth-child(9) {
+  background-image: url(../images/memo.JPG);
+}
+#content1 .right ul li:nth-child(9):hover {
+  background-image: url(../images/memo-2.JPG);
+}
+
+#content2 {
+  width: 100%;
+  background: #f5f4ef;
+  height: 588px;
+}
+#content2 .con_wrap {
+  background: #f5f4ef;
+  padding-top: 65px;
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+}
+#content2 .con_wrap div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#content2 .con_wrap img {
+  width: 95%;
+  border-radius: 30px;
+}
+#content3 {
+  width: 1170px;
+  height: 490px;
+  padding-top: 100px;
+  margin: 0 auto;
+  display: flex;
+}
+#content3 .txt_box {
+  width: 30%;
+}
+#content3 .item_box {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+#content3 .item {
+  padding: 0px 10px;
+  width: 33.333%;
+  display: flex;
+  flex-direction: column;
+}
+#content3 .item_img {
+  width: 100%;
+  height: 50%;
+}
+#content3 .item_name {
+  color: #656565;
+  padding-top: 20px;
+  font-size: 20px;
+}
+#content3 .price {
+  color: #00a6ff;
+  font-size: 18px;
+}
+#content3 .item_img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#content3 .i1 .item_img {
+  background-image: url(../images/diary.JPG);
+}
+#content3 .i1 .item_img:hover {
+  background-image: url(../images/diary-2.JPG);
+}
+#content3 .i2 .item_img {
+  background-image: url(../images/etc.JPG);
+}
+#content3 .i2 .item_img:hover {
+  background-image: url(../images/etc.JPG);
+}
+#content3 .i3 .item_img {
+  background-image: url(../images/ppnote.JPG);
+}
+#content3 .i3 .item_img:hover {
+  background-image: url(../images/ppnote-2.JPG);
+}

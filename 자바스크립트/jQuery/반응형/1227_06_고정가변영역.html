@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고정가변영역</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font: 1em Arial, "맑은 고딕", 돋움, Doctum, sans-serif;
+        overflow: hidden;
+      }
+      #wrap {
+        position: relative;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .main {
+        float: left;
+        /* float을 줌과 동시에 인라인 속성처럼 바뀜 그래서 max-width주석처리하고 윈도우 창 크기를 바꾸면 main영역 width가 자동으로 바뀜 */
+        background: #aaa;
+        margin-right: 300px;
+      }
+      .side {
+        position: absolute;
+        background: #bbb;
+        width: 300px;
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="main">
+        main영역 Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only
+        five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </div>
+      <div class="side">side영역</div>
+    </div>
+  </body>
+</html>

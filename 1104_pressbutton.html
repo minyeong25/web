@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>press button</title>
+    <style>
+        * { 
+            padding: 0; margin: 0; 
+        } 
+        ul { 
+            list-style: none; 
+        } 
+        a { 
+            text-decoration: none; 
+        }
+        body { 
+            font: 1em vedana, Arial, sans-serif; 
+            text-align: center; 
+            background: #eaeaea; 
+            perspective: 400px; 
+        }
+        .button { 
+            display: inline-block; 
+            padding: 20px 70px; 
+            color: #fff; 
+            font: 1.5em; 
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+            background: linear-gradient(#619bcb, #4984b4);
+            box-shadow: 0 6px 0 #2b638f, 0 3px 15px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3), inset 0 0 3px rgba(255,255,255,0.5); 
+            border-radius: 5px; 
+            transform: rotateX(20deg);
+            transition: all 0.2s ease-in-out; 
+        }
+        .button:hover { 
+            background: linear-gradient(#66a6d6, #4f8ebf);
+            text-shadow: 0 1px 0 rgba(0,0,0,0.5); 
+        }
+        .button:active {
+            box-shadow: 0 2px 0 #2b638f, 0 3px 15px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3) inset 0 0 3px rgba(255,255,255,0.5);
+            transform: rotateX(0deg);
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button">Press Me</a>
+</body>
+</html>

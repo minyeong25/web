@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.css">
+    <title>like</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            background: #485861;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+        .search_wrap {
+            box-sizing: border-box;
+            padding: 20px;
+            position: relative;
+            animation: search 1s ease-in-out both;
+        }
+        .search {
+            display: flex;
+        }
+        .search a {
+            position: absolute;
+            left: 28px;
+            top: 28px;
+            color: #fff;
+        }
+        .search input {
+            /* flex-shrink: 0; */
+            width: 100%;
+            height: 40px;
+            padding: 5px 0;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.3);
+            border: none;
+            transition: 0.5s;
+            text-align: center;
+            color: #fff;
+        }
+        .search input::placeholder {
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+        }
+        /* placeholder는 콜론 2개 */
+        input:focus {
+            width: 80%;
+            outline: none;
+        }
+        input::-ms-clear, input::-ms-reveal{
+	        display:none;
+            width:0;
+            height:0;
+            /* input x버튼 없애기 */
+        }
+        button {
+            flex-shrink: 0;
+            display: none;
+            border: none;
+            background: none;
+            color: antiquewhite;
+            margin-left: 20px;
+            /* transition: 0.2s; */
+        }
+        input:focus ~ button {
+            display: block;
+        }
+        @keyframes search {
+            from {top: -100px; }
+            to {top: 0; }
+        }
+        .contents {
+            animation: move_contents 1s;
+        }
+        .text {
+            margin: 124px 0 12px 24px;
+            color: #ffe6cf;
+        }
+        .text h1 {
+            font-size: 30px;
+            font-weight: lighter;
+        }
+        .text p {
+            font-size: 11px;
+            font-weight: lighter;
+            margin: 12px 0 0 0;
+            animation: move_contents 0.5s;
+        }
+        .image ul {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-auto-rows: 148px;
+            grid-column-gap: 17px;
+            grid-row-gap: 18px;
+            padding: 24px;
+        }
+        .image ul li {
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+        }
+        .image ul li:first-child {
+            background-image: url(images/banner3.jpg);
+        }
+        .image ul li:nth-child(2) {
+            background-image: url(images/craft.jpg);
+        }
+        .image ul li:nth-child(3) {
+            background-image: url(images/handydiary.jpg);
+        }
+        .image ul li:nth-child(4) {
+            background-image: url(images/memo.JPG);
+        }
+        .menu {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        .menu ul {
+            display: flex;
+            width: 100%;
+        }
+        .menu ul li {
+            width: 25%;
+        }
+        .menu ul li a {
+            display: block;
+            text-align: center;
+            background: #3d464b;
+            color: #ffe6cf;
+            opacity: 0.5;
+            font-size: 20px;
+            padding: 20px;
+        }
+        .menu ul li a:hover {
+            background: #272d30;
+        }
+        @keyframes move_contents {
+            from {transform: translateY(10px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="search_wrap">
+        <div class="search">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a><input class="search_bar" type="search" placeholder="search">
+            <button>취소</button>
+            <!-- 다 인라인 속성임 -->
+        </div>
+        
+    </div>
+    <div class="contents">
+        <div class="text">
+            <h1>Diary</h1>
+            <p>we'll make every years diary,
+            <br>record you memories.
+            </p>
+        </div>
+        <div class="image">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="1122_index.html"><i class="fa-solid fa-book-bookmark"></i></a></li>
+            <li><a href="#"><i class="fa-regular fa-file-lines"></i></a></li>
+            <li><a href="1122_like.html"><i class="fa-solid fa-heart"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-ellipsis"></i></a></li>
+        </ul>
+    </div>
+</body>
+</html>

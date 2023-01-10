@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .gallery {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        /* 현재 보고있는 화면의 전체를 다 씀 */
+      }
+      .gallery .visual li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 1s;
+      }
+      .gallery .visual li.on {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .gallery .visual li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .btn {
+        width: 100%;
+      }
+      .btn li {
+        position: absolute;
+        text-indent: -9999px;
+        cursor: pointer;
+        z-index: 1;
+        width: 15px;
+        height: 20px;
+        background: url(../images/btns.png);
+        top: 50%;
+      }
+      .btn li.prev {
+        left: 50px;
+        background-position: 0 -45px;
+      }
+      .btn li.next {
+        right: 50px;
+        background-position: -20px -45px;
+      }
+      .page {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+      }
+      .page li {
+        display: inline-block;
+      }
+      .page li a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        text-indent: -9999px;
+      }
+      .page li a:hover,
+      .page li a.on {
+        background: #0ff;
+      }
+      /* on클래스는 스크립트에서 하려고 하는 것 */
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        let num = 0; //초기값을 0으로
+        let total = $(".visual li").length; //li 의 갯수를 셈(6개)
+        $(".page li").eq(num).find("a").addClass("on");
+        $(".visual li").eq(num).addClass("on");
+        // 함수호출하지않아도 제일 처음 호출한것임
+        function gallery(n) {
+          // gallery 라는 함수를 만듦, 개체가 다 틀림 num 번호가 다름(다 0번째가 아님) num번호를 변수로 받아줘야함. gallery 함수 안에 매개변수가 필요하게 사용하면 됨
+          $(".page li a").removeClass("on");
+          $(".page li").eq(n).find("a").addClass("on");
+          $(".visual li").removeClass("on");
+          $(".visual li").eq(n).addClass("on");
+          //   n은 매개변수로 함수에 사용하기 위해 만든거임 매개변수는 0~5밖에없음
+          //   인덱스 0번째도(91줄) 첫 번째(밑에 gallery()안에 넣은 값)도 같이 실행이되니까 removeClass를 해줘야함
+        }
+        // gallery(1);
+        // 매번 갤러리 안에 숫자를 수정할 수 없으니까 조건을 만들거임.
+        function gallery_next() {
+          if (num < total - 1) {
+            //0,1,2,3,4,5라는 조건을 만족해야함(5보다 작은 애)
+            num++; // num= num+1 << 이러면 5가 들어갈때 6까지 되니까 total -1 을 해준 것임
+          } else {
+            num = 0;
+          }
+          gallery(num); //<여기들어가는 조건을 만들어줄거임(현재는 0을 실행 맨위에 넣어준 num=0)
+        }
+
+        let interval = setInterval(gallery_next, 2000);
+        $(".next").click(function () {
+          gallery_next();
+        });
+
+        function gallery_prev() {
+          if (num > 0) {
+            num--;
+          } else {
+            num = 5; //num이 마이너스로 갈 때
+          }
+          gallery(num);
+        }
+
+        $(".prev").click(function () {
+          gallery_prev();
+        });
+
+        // 호버했을 때 멈추도록
+        $(".gallery").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(gallery_next, 2000);
+          }
+        );
+
+        $(".page li a").click(function (e) {
+          // e라는 매개변수가 필요한 이유는 #으로 가는걸 막으려고
+          e.preventDefault();
+          let i = $(this).parent().index();
+          num = i;
+          gallery(i); //gallery();로는 호출 못함?
+          //이대로 끝나면 안됨 클릭 후 마우스 이탈했을 때 이전에 실행했던 다음으로 넘어감 그래서 변수를 하나 더 만듦 num=i;로 기존의 num 이 i로 바뀜 내가 클릭한 인덱스 번호를 num 에 넣어서 마우스 이탈해도 순서대로 나올 수 있도록 함.
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="btn">
+        <li class="prev">prev</li>
+        <li class="next">next</li>
+      </ul>
+      <ul class="visual">
+        <li><img src="../images/visual1.jpg" alt="visual1" /></li>
+        <li><img src="../images/visual2.jpg" alt="visual2" /></li>
+        <li><img src="../images/visual3.jpg" alt="visual3" /></li>
+        <li><img src="../images/visual4.jpg" alt="visual4" /></li>
+        <li><img src="../images/visual5.jpg" alt="visual5" /></li>
+        <li><img src="../images/visual6.jpg" alt="visual6" /></li>
+      </ul>
+      <ul class="page">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul태그</title>
+    <style>
+        .main > li {
+            list-style-image: url(images/ico_bbslist.gif);
+        }
+        .four {
+            list-style: none;
+        }
+        .five {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4
+            <ul class="four">
+                <li>리스트41</li>
+                <li>리스트42</li>
+                <li>리스트43</li>
+            </ul>
+        </li>
+        <li>리스트5
+            <ul class="five">
+                <li>리스트51</li>
+                <li>리스트52</li>
+                <li>리스트53</li>
+            </ul>
+        </li>
+    </ul>
+    
+</body>
+</html>

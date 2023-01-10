@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap"rel="stylesheet">
+    <title>em_rem</title>
+    <style>
+        html {
+            font-size: 200%;
+            /* 16px*2=32px */
+        }
+        .a {
+            font-size: 50%;
+            width: 10em;
+            /* 16*10=160px, 1em=16px em단위는 폰트사이즈와 관련 있음 */
+            height: 10em;
+            background: #ccc;
+            margin-bottom: 10em;
+        }
+        .b {
+            font-size: 50%;
+            width: 10rem;
+            height: 10rem;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <div class="b"></div>
+</body>
+</html>

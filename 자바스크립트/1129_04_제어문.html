@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문 If</title>
+<script>
+        // let 대전 = "042";
+        // let 서울 = "02";
+        // let 부산 = "051";
+        // let user_location = prompt("지역을 입력해주세요");
+        // if (user_location == "대전") {
+        //     document.write("입력하신 지역은 "+user_location+"이고 지역번호는 "+대전+" 입니다");
+        // }
+        // else if (user_location == "서울") {
+        //     document.write("입력하신 지역은 "+user_location+"이고 지역번호는 "+서울+" 입니다");
+        // }
+        // else if (user_location == "부산") {
+        //     document.write("입력하신 지역은 "+user_location+"이고 지역번호는 "+부산+" 입니다");
+        // }else {
+        //     document.write("입력하신 지역은 "+user_location+"이고 지역번호는 등록되어있지 않습니다");
+        // }
+
+        /*쌤*/
+        let area = prompt("지역을 입력해 주세요");
+        let area_num;
+        if(area == "서울" || area == "seoul" || area == "Seoul" || area == "s" || area == "S") {
+            area_num = "02";
+            area = "서울";
+        } else if(area == "대전" || area == "daejeon" || area == "Daejeon" || area == "d" || area == "D") {
+            area_num = "042";
+            area = "대전";
+        } else if(area == "부산" || area == "busan" || area == "Busan" || area == "b" || area == "B") {
+            area_num = "051";
+            area = "부산";
+        } else {
+            area_num = "등록되지 않은 지역"
+        }
+        document.write("입력하신 지역은 "+area+"이고 지역번호는 "+area_num+"입니다.");
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal popup</title>
+    <style>
+      #my_modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #pop {
+        width: 500px;
+        height: 500px;
+        background: #fff;
+      }
+      iframe {
+        width: 100%;
+        height: 90%;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="modal.js"></script>
+  </head>
+  <body>
+    <h1>모달팝업창 만들기</h1>
+    <button>클릭</button>
+    <div id="my_modal">
+      <div id="pop">
+        <iframe src="0106_02_modalpopup_content.html" frameborder="0"></iframe>
+        <a href="#" id="close">close</a>
+      </div>
+    </div>
+  </body>
+</html>

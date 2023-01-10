@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+         div {
+            width: 200px;
+            height: 20px;
+            border: 1px solid greenyellow;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: cubic-bezier(0,.68,1,.36);
+            transition-delay: 1s;
+         }
+
+        .color:hover {
+            background: greenyellow;
+            color: #fff;
+         }
+        .offset:hover {
+            /* margin-left: 50px; */
+            transform: translate(50px);
+         }
+        .border:hover {
+            border-width: 10px;
+         }
+        .size:hover {
+            width: 400px;
+            height: 400px;
+         }
+         .div5:hover {
+            width: 400px;
+         }
+    </style>
+</head>
+<body>
+    <div class="color">color change</div>
+    <div class="offset">offset change</div>
+    <div class="border">border change</div>
+    <div class="size">size change</div>
+    <div class="div5">ease</div>
+</body>
+</html>

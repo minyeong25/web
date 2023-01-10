@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap"rel="stylesheet">
+    <title>css를 활용한 메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-size: 120%;
+            background: #32373d;
+        }
+        #container {
+            margin: 100px auto;
+            width: 14em;
+            font-size: 0.8em;
+            border: 1px solid #000;
+        }
+        .menu {
+            width: auto;
+            height: auto;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 0 18px rgba(0,0,0,0.1);
+        }
+        .menu > li > a {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 2.75em;
+            line-height: 2.75em;
+            text-indent: 2.75em;
+            color: #fff;
+            border-bottom: 1px solid #33373d;
+            background: #616975;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+            box-shadow: inset 0 1px 0 #878e98;
+        }
+        .menu ul li a {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 2.75em;
+            line-height: 2.75em;
+            text-indent: 2.75em;
+            background: #fff;
+            color: #878d95;
+            font-size: 0.7em;
+            border-bottom: 1px solid #efeff0;
+        }
+        .menu ul li:last-child a {
+            border-bottom: 1px solid #33373d;
+        }
+        .menu > li > a:hover, .menu > li:target > a {
+            border-bottom: 1px solid #103c56;
+            background: #35afe3;
+            box-shadow: inset 0 1px 0 #6ad2ef;
+        }
+        .menu > li > a span {
+            display: inline-block;
+            position: absolute;
+            right: 1em;
+            top: 50%;
+            margin: -0.8em 0 0 0;
+            padding: 0.4em 0.6em;
+            height: 1em;
+            line-height: 1em;
+            text-align: center;
+            text-indent: 0;
+            font-size: 0.8em;
+            background: #48515c;
+            color: #fff;
+            border-radius: 0.7em;
+            text-shadow: 0 1px 0 rbga(0,0,0,0.5);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.1)
+                        inset 0 1px 3px rbga(0,0,0,0.2);
+        }
+        .menu > li > a:hover span {
+            background: #2173a1;
+        }
+        .menu ul li a:hover, .menu ul li a:hover span {
+            color: #32373d;
+        }
+        .menu ul li a span {
+            display: inline-block;
+            margin: -0.9em 0 0 0;
+            padding: 0.4em 0.7em;
+            position: absolute;
+            right: 1em;
+            top: 50%;
+            height: 1em;
+            line-height: 1em;
+            text-indent: 0;
+            text-align: center;
+            background: #fff;
+            color: #878d95;
+            border: 1px solid #d0d0d3;
+            border-radius: 0.7em;
+            text-shadow: 0 0 0 rgba(0,0,0,0.1);
+        }
+        .menu > li > ul {
+            overflow: hidden;
+            height: 0;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        #one:target > ul, #two:target > ul, #three:target > ul, #four:target > ul, #five:target > ul{
+            height: auto;
+            opacity: 1;
+        }
+        .menu > li > a::before {
+            content: "";
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            margin: -0.5em 0 0 0;
+            left: 0;
+            top: 50%;
+            font-size: 36px;
+            background: url(images/sprite.png);
+        }
+        .menu > li:nth-child(1) > a::before {background-position: 0 0;}
+        .menu > li:nth-child(2) > a::before {background-position: -38px 0;}
+        .menu > li:nth-child(3) > a::before {background-position: 0 -38px;}
+        .menu > li:nth-child(4) > a::before {background-position: -39px -38px;}
+        .menu > li:nth-child(5) > a::before {background-position: -76px 0;}
+        .menu ul li a::before {
+            content: "▶" ;
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            border: 1px solid;
+            font-size: 8px;
+            top: 0;
+            left: -2.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul class="menu">
+            <li id="one"><a href="#one">Friends<span>340</span></a>
+                <ul>
+                    <li><a href="#">Cute Kittens<span>14</span></a></li>
+                    <li><a href="#">Strange “Stuff”<span>6</span></a></li>
+                    <li><a href="#">Automatic Fails<span>2</span></a></li>
+                </ul>
+            </li>
+            <li id="two"><a href="#two">Videos<span>147</span></a>
+                <ul>
+                    <li><a href="#">Cute Kittens<span>14</span></a></li>
+                    <li><a href="#">Strange “Stuff”<span>6</span></a></li>
+                    <li><a href="#">Automatic Fails<span>2</span></a></li>
+                    <li><a href="#">Strange “Stuff”<span>6</span></a></li>
+                    <li><a href="#">Cute Kittens<span>14</span></a></li>
+                    <li><a href="#">Strange “Stuff”<span>6</span></a></li>
+                </ul>
+            </li>
+            <li id="three"><a href="#three">Galleries<span>340</span></a>
+                <ul>
+                    <li><a href="#">Automatic Fails<span>2</span></a></li>
+                </ul>
+            </li>
+            <li id="four"><a href="#four">Podcasts<span>222</span></a>
+                <ul>
+                    <li><a href="#">Cute Kittens<span>14</span></a></li>
+                    <li><a href="#">Strange “Stuff”<span>6</span></a></li>
+                    <li><a href="#">Automatic Fails<span>2</span></a></li>
+                </ul>
+            </li>
+            <li id="five"><a href="#five">Podcasts<span>16</span></a>
+                <ul>
+                    <li><a href="#">Cute Kittens<span>14</span></a></li>
+                    <li><a href="#">Strange “Stuff”<span>6</span></a></li>
+                    <li><a href="#">Automatic Fails<span>2</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

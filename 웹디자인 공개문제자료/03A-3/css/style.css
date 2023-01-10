@@ -1,0 +1,167 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+header .logo {
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
+}
+header .logo img {
+    width: 100%;
+    padding: 30px 0px;
+    vertical-align: middle;
+}
+header .menu {
+    margin-right: 20px;
+}
+header .menu > ul {
+    display: flex;
+    width: 800px;
+    position: relative;
+}
+header .menu > ul > li {
+    width: 25%;
+}
+header .menu > ul > li > a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    border-right: none;
+    box-sizing: border-box;
+}
+header .menu > ul > li:last-child > a {
+    border-right: 1px solid #000;
+}
+header .menu li ul {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 800px;
+}
+header .menu li ul li {
+    width: 25%;
+}
+header .menu li ul li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+    background: #fff;
+    text-align: center;
+}
+header .menu ul > li:hover > ul {
+    height: 95px;
+}
+header .menu ul > li:hover > a {
+    background: #000;
+    color: #fff;
+}
+header .menu ul > li:hover ul li a {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+header .menu ul > li:hover ul li:last-child a {
+    border-bottom: 1px solid #000;
+}
+/* section 시작 */
+section .slide {
+    height: 300px;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.content {
+    display: flex;
+    height: 200px;
+}
+.content > div {
+    width: 33.333%;
+}
+.content .content1 {
+    background: #ccc;
+}
+.content .content1 input[type=radio] {
+    display: none;
+}
+.content .content2 {
+    background: #bbb;
+}
+.content .content3 {
+    background: #ccc;
+}
+footer {
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+footer .logo {
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
+}
+footer .logo img {
+    width: 100%;
+    padding: 30px 0px;
+}
+footer .contents {
+    width: 900px;
+}
+footer .menu ul {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .menu ul li {
+    position: relative;
+}
+footer .menu ul li a {
+    color: #000;
+    font-size: 14px;
+}
+footer .menu ul li a:hover {
+    text-decoration: underline;
+}
+footer .menu ul > li::after {
+    content: "|";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    display: block;
+}
+footer .menu ul > li:first-child::after {
+    display: none;
+}
+footer .copyright {
+    font-size: 14px;
+    padding-top: 10px;
+}

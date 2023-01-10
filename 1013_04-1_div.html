@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p로 묶을때</title>
+    <style>
+        .wrap{
+            width: 1010px;
+            margin: 0 auto;
+        }
+        .wrap > div {
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .left{
+            width: 500px;
+            background: rgb(54, 54, 54);
+            color: white;
+            border-radius: 20px;
+            margin-right: 10px;
+            float: left;
+        }
+        .right{
+            width: 500px;
+            background: rgb(164, 255, 89);
+            color: white;
+            border-radius: 0 20px;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+        <div class="right">
+            <p> Is a long established fact that a reader will be distracted by the readable 
+                content of a page when looking at its layout. The point of using Lorem Ipsum 
+                is that it has a more-or-less normal distribution of letters, as opposed to using 
+                'Content here, content here', making it look like readable English.</p></div>
+    </div>
+</body>
+</html>

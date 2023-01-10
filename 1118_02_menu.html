@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul li a {
+            position: relative;
+            display: block;
+            /* display:block 안하고 position:absolute로 줘도 됨 but 그러면 다 겹치게되니까 relative,block으로..*/
+            width: 100px;
+            padding: 15px;
+            margin: 10px 0;
+            left: -80px;
+            border-radius: 0 5px 5px 0;
+            /* 왼쪽은 안준거임 */
+            transition: 0.5s;
+        }
+        ul li a:hover {
+            left: 0;
+        }
+        #about {
+            background: #aaa;
+        }
+        #blog {
+            background: #bbb;
+        }
+        #project {
+            background: #ccc;
+        }
+        #contact {
+            background: #ddd;
+        }
+        .menu > div {
+            width: 100px;
+            margin: 6px 0 6px -90px;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .menu > div:hover {
+            margin-left: -30px;
+        }
+        .menu1 {
+            background: rgb(0, 229, 61);
+        }
+        .menu2 {
+            background: rgb(0, 149, 229);
+        }
+        .menu3 {
+            background: rgb(249, 44, 25);
+        }
+        .menu4 {
+            background: rgb(61, 61, 61);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" id="about">About</a></li>
+        <li><a href="#" id="blog">Blog</a></li>
+        <li><a href="#" id="project">Project</a></li>
+        <li><a href="#" id="contact">Contact</a></li>
+    </ul>
+    <div class="menu">
+        <div class="menu1">About</div>
+        <div class="menu2">Blog</div>
+        <div class="menu3">Project</div>
+        <div class="menu4">Contact</div>
+    </div>
+</body>
+</html>

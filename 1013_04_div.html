@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div</title>
+    <style>
+        .wrap{
+            width: 1010px;
+            margin: 0 auto;
+        }
+        .wrap > div{
+            box-sizing: border-box; 
+            /* 이걸 줘야했음 */
+        }
+        .left{
+            width: 500px; 
+            /* 크기를 줘야했음 */
+            background: rgb(54, 54, 54);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            float: left;
+        }
+        .right{
+            width: 500px;
+            background: rgb(164, 255, 89);
+            color: white;
+            padding: 10px;
+            border-radius: 0 20px;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+        <div class="right">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. .</div>
+    </div>
+</body>
+</html>

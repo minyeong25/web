@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input[type=radio] {
+            display: none;
+        }
+        img {
+            width: 500px;
+            display: none;
+        }
+        #one:checked ~ p img:first-child {
+            display: block;
+        }
+        #two:checked ~ p img:nth-child(2) {
+            display: block;
+        }
+        #three:checked ~ p img:last-child {
+            display: block;
+        }
+        .letter {
+            width: 500px;
+            display: flex;
+            /* justify-content: space-around; */
+        }
+        .letter label:first-child {
+            width: 33.333%;
+            height: 50px;
+            background: rgb(127, 219, 255);
+            line-height: 50px;
+            text-align: center;
+        }
+        .letter label:nth-child(2) {
+            width: 33.333%;
+            height: 50px;
+            background: rgb(29, 183, 221);
+            line-height: 50px;
+            text-align: center;
+        }
+        .letter label:last-child {
+            width: 33.333%;
+            height: 50px;
+            background: rgb(18, 93, 255);
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="radio" name="photo" id="one" checked>
+        <input type="radio" name="photo" id="two">
+        <input type="radio" name="photo" id="three">
+        <p>
+            <img src="images/photo1.jpg" alt="photo1">
+            <img src="images/photo2.jpg" alt="photo2">
+            <img src="images/photo3.jpg" alt="photo3">
+        </p>
+        <p class="letter">
+            <label for="one">첫번째이미지</label>
+            <label for="two">두번째이미지</label>
+            <label for="three">세번째이미지</label>
+        </p>
+    </form>
+</body>
+</html>

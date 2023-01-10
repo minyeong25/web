@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".left").click(function () {
+          $("div").css("left", "-=10px"); // left = left - 10px == left -= 10px
+          // $("p").text($(this).text()); //input이 아니라 p태그일때
+          $("p input").val($(this).text());
+          //input은 안에 데이터를 넣는게 text가 아니라 value임 -> val()
+        });
+        $(".right").click(function () {
+          $("div").css("left", "+=10px");
+          $("p input").val($(this).text());
+        });
+        $(".top").click(function () {
+          $("div").css("top", "-=10px");
+          $("p input").val($(this).text());
+        });
+        $(".bottom").click(function () {
+          $("div").css("top", "+=10px");
+          $("p input").val($(this).text());
+        });
+        $(document).keydown(function (e) {
+          console.log(e.keyCode);
+          if (e.keyCode == 37) {
+            $("div").css("left", "-=10px");
+            $("p input").val("left");
+          } else if (e.keyCode == 38) {
+            $("div").css("top", "-=10px");
+            $("p input").val("top");
+          } else if (e.keyCode == 39) {
+            $("div").css("left", "+=10px");
+            $("p input").val("right");
+          } else if (e.keyCode == 40) {
+            $("div").css("top", "+=10px");
+            $("p input").val("bottom");
+          }
+          //해당 키의 고유의 번호 키 값이 나옴
+          //keydown은 키를 눌렀을 때
+          // == 이 같다는 의미
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <p></p> -->
+    <p><input type="text" id="user" /></p>
+    <button class="left">left</button>
+    <button class="right">right</button>
+    <button class="top">top</button>
+    <button class="bottom">bottom</button>
+    <div></div>
+  </body>
+</html>

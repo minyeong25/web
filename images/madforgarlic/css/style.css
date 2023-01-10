@@ -1,0 +1,118 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.top {
+    background: #666;
+}
+.top ul {
+    width: 1000px;
+    margin: 0 auto;
+    background: #666;
+    display: flex;
+    justify-content: right;
+}
+.top ul li:nth-child(4) {
+    background: #fff;
+    height: 90%;
+    padding-right: 30px;
+}
+.top ul li:nth-child(4) a{
+    color: #666;
+}
+.top ul li a{
+    padding: 0 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.gnb {
+    background: #161616;
+}
+.gnb > ul {
+    height: 70px;
+    width: 1000px;
+    margin: 0 auto;
+    background: #161616;
+    display: flex;
+    justify-content: space-between;
+}
+.gnb ul > li > ul {
+    display: flex;
+    padding-right: 30px;
+}
+.gnb ul > li > ul > li a {
+    color: #fff;
+    padding: 10px;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+/* header 끝 */
+#visual {
+    background: #9a9a9a;
+    height: 400px;
+}
+#visual p {
+    text-align: center;
+}
+#contents div {
+    background: #161616;
+}
+#contents .contents_top ul {
+    background: #161616;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#contents .contents_top ul li {
+    padding: 20px 0;
+}
+.contents_bottom {
+    padding-bottom: 50px;
+}
+#contents .contents_bottom > ul {
+    background: #161616;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#contents .contents_bottom > ul > li > ul li a {
+    color: #fff;
+}
+#contents .contents_bottom > ul > li > ul > li:first-child a {
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+}
+#contents span {
+    font-size: 14px;
+    color: #a3a3a3;
+}
+/* section 끝 */
+.footer_top {
+    padding-top: 20px;
+}
+footer {
+    background: #161616;
+    border-top: 1px solid #666;
+}
+.footer_top, .footer_top ul, .footer_bottom p {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.footer_top ul li a {
+    padding: 0 10px;
+    color: #a3a3a3;
+    font-size: 14px;
+}

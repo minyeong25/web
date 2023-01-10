@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googlet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: genericons;
+            src: url(webfonts/genericons-regular-webfont.woff) format("woff");
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .top {
+            font-size: 14px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .top .left ul {
+            display: flex;
+            padding-left: 15px;
+        }
+        .top .left li:hover a {
+            text-decoration: underline;
+        }
+        .top .left ul li {
+            padding: 0 10px;
+        }
+        .top .right ul {
+            display: flex;
+        }
+        .top .right ul li {
+            padding: 0 15px 0 0;
+        }
+        .top .right ul li img {
+            padding: 0 10px;
+        }
+        .top .right li:hover a {
+            text-decoration: underline;
+        }
+        .top .right li input {
+            background: rgb(0, 110, 255);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 30px;
+            margin: -10px 0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        :focus {
+            outline: none;
+        }
+        /* .top .right li:nth-child(3) a::after {
+            content: "\f436";
+            font-family: genericons;
+            font-size: 30px;
+        } */
+        section .logo {
+            /* width: 1000px; */
+            margin: 200px auto 0;
+            text-align: center;
+        }
+        section .logo img {
+            width: 272px;
+            height: 92px;
+        }
+        section .search {
+            /* width: 1000px; */
+            margin: 20px auto;
+            text-align: center;
+            position: relative;
+        }
+        section .search input {
+            width: 600px;
+            height: 50px;
+            border-radius: 50px;
+            border: 0.5px solid #ccc;
+            padding-left: 50px;
+            padding-right: 120px;
+        }
+        section .search p::before {
+            content: "\f400";
+            font-family: genericons;
+            position: absolute;
+            left: 215px;
+            top: 15px;
+            font-size: 20px;
+            color: #888;
+        }
+        section .search span {
+            position: absolute;
+            top: 12px;
+            left: 690px;
+        }
+        section .search span a {
+            padding-right: 10px;
+            vertical-align: middle;
+        }
+        section .search a:last-child img{
+            height: 22px;
+        }
+        section .bottom {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        section .bottom span {
+            background: #f3f3f3;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        section .bottom span:first-child {
+            margin-right: 10px;
+        }
+        section .bottom div {
+            margin-top: 20px;
+            height: 136px;
+            background: url(images/google/image/google_logo.png) no-repeat center ;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top">
+            <div class="left">
+                <ul>
+                    <li><a href="#">Google 정보</a></li>
+                    <li><a href="#">스토어</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Gmail</a></li>
+                    <li><a href="#">이미지</a></li>
+                    <li><a href="#"><img src="images/google/image/menu.gif" alt="menu"></a></li>
+                    <li><input type="button" value="로그인" ></li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <div class="logo">
+                <a href="#"><img src="images/google/image/logo.png" alt="logo"></a>
+            </div>
+            <div class="search">
+                <p></p>
+                <input type="search" autofocus>
+                <span>
+                    <a href="#"><img src="images/google/image/keyboard.gif" alt="keyboard"></a>
+                    <a href="#"><img src="images/google/image/mice.gif" alt="keyboard"></a>
+                    <a href="#"><img src="images/google/image/camera.svg" alt="camera"></a>
+                </span>
+            </div>
+            <div class="bottom">
+                <span><a href="#">Google 검색</a></span>
+                <span><a href="#">I'm Feeling Lucky</a></span>
+                <div></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

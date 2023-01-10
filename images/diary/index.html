@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>analog keeper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, '맑은 고딕', sans-serif;
+        }
+        header .top {
+            background: #000;
+        }
+        header .top ul {
+            background: #000;
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: end;
+        }
+        header .top li {
+            height: 30px;
+            line-height: 30px;
+            padding-right: 10px;
+        }
+        header .top li span {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        header .top li a {
+            display: block;
+            color: #fff;
+            font-size: 14px;
+        }
+        header .logo {
+            width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        header .gnb {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        header .gnb > ul {
+            width: 640px;
+            margin: 0 auto;
+            display: flex;
+        }
+        header .gnb ul > li {
+            position: relative;
+            width: 20%;
+        }
+        header .gnb li:hover > a {
+            text-decoration: underline;
+        }
+        header .gnb > ul:hover li ul {
+            height: 100px;
+        }
+        header .gnb > ul > li > a {
+            font-size: 16px;
+            display: block;
+            padding: 10px 0;
+            color: #000;
+            text-align: center;
+        }
+        header .gnb > ul > li:first-child a {
+            color: #f00;
+        }
+        header .gnb li ul {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+            background: #fff;
+        }
+        header .gnb li ul li {
+            width: 100%;
+        }
+        header .gnb li > ul > li > a {
+            color: #000;
+            display: block;
+            text-align: center;
+        }
+        section .banner {
+            height: 300px;
+            margin: 10px 0;
+            text-align: center;
+            /* background-size: 100% 600px;
+            background-position: center;
+            animation: banner_ani 5s infinite; */
+        }
+        section .banner img {
+            width: 1280px;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        /* @keyframes banner_ani {
+            0% {background-image: url(images/banner.jpeg);}
+            50% {background-image: url(images/banner2.jpeg);}
+            75% {background-image: url(images/banner3.jpg);}
+            100% {background-image: url(images/banner.jpeg);}
+        } */
+        section .contents1 {
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        section .contents1 div {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            position: relative;
+        }
+        section .contents1 div img {
+            width: 100%;
+            height: 100%;
+        }
+        section .contents1 div::after {
+            content: "";
+            color: #fff;
+            line-height: 300px;
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(0,0,0,0.2);
+        }
+        section .contents1 div:first-child::after {
+            content: "메모장";
+        }
+        section .contents1 div:nth-child(2)::after {
+            content: "스티커";
+        }
+        section .contents1 div:last-child::after {
+            content: "다이어리";
+        }
+        section .contents1 div:hover::after{
+            display: block;
+        }
+        section .contents1 div p:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        section .contents1 div p {
+            text-align: center;
+        }
+        section .contents1 div p span {
+            vertical-align: middle;
+            font-size: 18px;
+        }
+        section .contents2 {
+            width: 1280px;
+            margin: 100px auto;
+        }
+        section .contents2 .diary ul {
+            display: flex;
+            justify-content: center;
+        }
+        section .contents2 .diary li {
+            width: 400px;
+            height: 400px;
+        }
+        section .contents2 .diary li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        section .contents2 .diary li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        section .contents2 .diary li h2 {
+            padding-bottom: 15px;
+        }
+        section .contents2 .diary li span:last-of-type {
+            padding-top: 15px;
+            font-size: 12px;
+        }
+        section .contents2 .first li:first-child:hover, section .contents2 .second li:last-child:hover {
+            background: rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="top">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined">
+                        search
+                        </span></a></li>
+                </ul>
+            </div>
+            <div class="logo"><img src="images/logo.jpg" alt="logo"></div>
+            <div class="gnb">
+                <ul>
+                    <li><a href="#">Best</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">New</a>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Product</a>
+                        <ul>
+                            <li><a href="#">sticker</a></li>
+                            <li><a href="#">memo pad</a></li>
+                            <li><a href="#">diary</a></li>
+                            <li><a href="#">etc</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Notice</a>
+                        <ul>
+                            <li><a href="#">Notice</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Review</a>
+                        <ul>
+                            <li><a href="#">Review</a></li>
+                            <li><a href="#">Event</a></li>
+                        </ul></li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <div class="banner">
+                <!-- <div></div> -->
+                <img src="images/Rectangle 1.png" alt="banner1">
+                <!-- <img src="images/banner2.jpeg" alt="banner2">
+                <img src="images/banner3.jpg" alt="banner3"> -->
+            </div>
+            <div class="contents1">
+                <div>
+                    <img src="images/memo.JPG" alt="memopad">
+                    <p>memopad<span class="material-symbols-outlined">
+                        chevron_right</span>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/sticker.JPG" alt="sticker">
+                    <p> sticker<span class="material-symbols-outlined">
+                            chevron_right
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/diary.JPG" alt="diary">
+                    <p>diary<span class="material-symbols-outlined">
+                            chevron_right
+                            </span>
+                    </p>
+                </div>
+            </div>
+            <div class="contents2">
+                <div class="diary first">
+                    <ul>
+                        <li>
+                            <p>
+                                <h2>Handy diary</h2>
+                                <span>한 손 가득<br>
+                                무한한 가능성의 공간</span>
+                                <span>6개월 핸디 다이어리는 30주를 기록할 수 있습니다.</span>
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/handydiary.JPG" alt="handydiary">
+                        </li>
+                    </ul>
+                </div>
+                <div class="diary second">
+                    <ul>
+                        <li>
+                            <img src="images/craft.JPG" alt="craftdiary">
+                        </li>
+                        <li>
+                            <p>
+                                <h2>Craft Diary</h2>
+                                <span>종이 안에 펼쳐지는<br>
+                                내가 만든 길</span>
+                                <span>
+                                크라프트 다이어리는 세트 구성 없이<br> 커버와 내지 모두 단품으로 구성했습니다.</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li>상호명 아날로그키퍼</li>
+                <li>대표자 문경연</li>
+                <li>고객센터 070-8802-4447</li>
+                <li>사업자등록번호	8320201225</li>
+            </ul>
+            <ul>
+                <li>사업장 소재지 서울특별시 종로구 옥인길 8 (형주빌딩) 3층 301호 (우 : 03034)</li>
+                <li>통신판매업번호 2019-서울종로-0953</li>
+                <li>e-mail mooonky67@naver.com</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

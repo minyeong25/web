@@ -1,0 +1,111 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+body {
+    font: 1em Arial, 돋움, Doctum, sans-serif;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+header .gnb:hover .bg {
+    height: 123px;
+}
+header .bg {
+    position: absolute;
+    width: 1200px;
+    height: 0px;
+    background: rgba(0,0,0,0.8);
+    left: 0;
+    top: 70px;
+    transition: all 1s;
+}
+header .gnb {
+    margin-top: 30px;
+    margin-right: 20px;
+    width: 800px;
+}
+header .gnb > ul {
+    display: flex;
+}
+header .gnb > ul > li {
+    width: 25%;
+    position: relative;
+}
+header .gnb > ul > li > a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+}
+header .gnb li ul {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+    /* box-sizing: border-box; */
+}
+header .gnb > ul > li:last-child > a{
+    border-right: 1px solid #000;
+}
+header .gnb li ul li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.gnb > ul > li:hover > a, .gnb li ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+/*case01*/
+/* .gnb > ul > li:hover ul {
+    height: 120px;
+} */
+.gnb > ul:hover ul {
+    height: 120px;
+    border-bottom: 1px solid #000;
+}
+.gnb > ul > li:first-child ul {
+    border-left: 1px solid #000;
+}
+.gnb > ul > li:last-child ul {
+    border-right: 1px solid #000;
+}
+.slide {
+    width: 100%;
+    height: 300px;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right top;
+}
+.contents {
+    display: flex;
+}
+/* .contents div {
+    width: 33.333%;
+    height: 200px;
+} */

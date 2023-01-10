@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 500px;
+        height: 333.33px;
+        transition: 1s;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".left").click(function () {
+          $("img").css({ width: "0", height: "333.33px" });
+        });
+        $(".right").click(function () {
+          $("img").css("width", "500px");
+        });
+        $(".up").click(function () {
+          $("img").css({ width: "500px", height: "0" });
+        });
+        $(".down").click(function () {
+          $("img").css({ width: "500px", height: "0" });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div><img src="../images/photo1.jpg" alt="photo1" /></div>
+    <button class="left">slideleft</button>
+    <button class="right">slideright</button>
+    <button class="up">slideup</button>
+    <button class="down">slidedown</button>
+  </body>
+</html>

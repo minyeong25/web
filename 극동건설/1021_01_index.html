@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>극동건설</title>
+    <style>
+        @font-face {
+            font-family: NotoSans;
+            src: url(../webfonts/NotoSansKR-Medium.woff);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body {
+            font-family: NotoSans, sans-serif, 돋움;
+        }
+        .business{
+            background: #f0f0f0;
+            padding: 100px 0;
+        }
+        .business ul {
+            width: 1280px;
+            margin: 0px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .business ul li{
+            width: 400px;
+            height: 300px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .business li:first-child {
+            background: url(images/토목.jpg);
+        }
+        .business li:nth-child(2) {
+            background: url(images/건축.jpg);
+        }
+        .business li:nth-child(3) p{
+            padding: 0;
+            text-align: center;
+            line-height: 300px;
+        }
+        .business li:nth-child(4),.business li:nth-child(5),.business li:nth-child(6) {
+            margin-top: 40px;
+        }  
+        .business li:nth-child(5) {
+            background: url(images/환경.jpg);
+        }
+        .business li:last-child {
+            background: url(images/해외.jpg);
+        }
+        .business ul li p {
+            padding: 20px 0 0 20px;
+            color: #fff;
+        }
+        .business li:nth-child(3) p {
+            color: #000;
+            font-size: 48px;
+        }
+
+        .portfolio {
+            width: 1280px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .portfolio .left {
+            font-size: 40px;
+        }
+        .right ul{
+            display: flex;
+            /* width: 500px;
+            justify-content: space-between; */
+        }
+        .right ul li {
+            width: 110px;
+            height: 50px;
+            border: 1px solid #233f76;
+            background: #eeeeee;
+            text-align: center;
+            line-height: 50px;
+            margin-left: 10px;
+        }
+        .right ul li:first-child {
+            background: #233f76;
+        }
+        .right ul li:first-child a{
+            color: #fff;
+        }
+        .right ul li:first-child:hover a{
+            color: #233f76;
+        }
+        .right ul li a {
+            color: #233f76;
+            display: block;
+        }
+        .right ul li:hover a {
+            background: #fff;
+        }
+        .work {
+            height: 550px;
+            display: flex;
+        }
+        .left_wrap {
+            width: 60%;
+            background: #233f76;
+        }
+        .work .right {
+            width: 40%;
+            background: #fff;
+        }
+        .work .left {
+            display: flex;
+            justify-content: end;
+        }
+        .work .left .arrow_left {
+            color: #fff;
+            line-height: 500px;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        .work .right {
+            color: #233f76;
+            padding: 0 0 0 75px;
+        }
+        .work .right p:first-child {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        .work .right p:nth-child(2) {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+        .work .right p:nth-child(3) {
+            font-size: 16px;
+            margin-top: 40px;
+        }
+        .work .right .arrow_right {
+            width: 400px;
+            color: #000;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: right;
+        }
+        .work .right p:nth-child(5) {
+            width: 207px;
+            height: 62px;
+            border: 1px solid #233f76;
+            line-height: 62px;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .work .right p:last-child:hover {
+            background: #233f76;
+            color: #fff;
+        }
+        .custom {
+            text-align: center;
+            color: #fff;
+            height: 850px;
+            background: url(images/채용bg.jpg) no-repeat fixed center/cover;
+        }
+        .custom .contents {
+            padding: 300px;
+            height: 850px;
+            width: 1280px;
+            margin: 0 auto;
+        }
+        .custom .contents ul {
+            display: flex;
+            margin-top: 150px;
+        }
+        .custom .contents ul li {
+            padding: 0 30px;
+            border-right: 1px solid rgb(255, 255, 255,0.5);
+            width: 220px;
+            height: 100px;
+        }
+        .custom .contents ul li:last-child {
+            border-right: none;
+        }
+        .custom .contents ul li p {
+            margin-top: 20px;
+        }
+    </style>
+        
+</head>
+<body>
+    <div class="business">
+        <ul>
+            <li><p>CIVIL<br>WORK</p></li>
+            <li><p>ARCHITECTURAL<br>WORK</p></li>
+            <li><p>BUSINESS</p></li>
+            <li></li>
+            <li><p>PLANTS<br>ENVIRONMENTAL<br>WORK</p></li>
+            <li><p>OVERSEAS<br>BUSINESS</p></li>
+        </ul>
+    </div>
+    <div class="portfolio">
+        <div class="left">PORTFOLIO</div>
+        <div class="right">
+            <ul>
+                <li><a href="#">토목</a></li>
+                <li><a href="#">건축</a></li>
+                <li><a href="#">플랜트 · 환경</a></li>
+                <li><a href="#">해외사업</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="work">
+        <div class="left_wrap">
+            <div class="left">
+                <div class="arrow_left">〈</div>
+                <div class="work_img"><img src="images/도로.jpg" alt="img"></div>
+            </div>
+        </div>
+        <div class="right">
+            <p>도로/터널/교량</p>
+            <p>CIVILENGINEERING WORKS</p>
+            <p>극동건설은 허허벌판에 길을 내고, 망망대해에<br>다리를 놓으며, 대한민국 지도를 바꾸어 왔습니다. </p>
+            <div class="arrow_right">〉</div>
+            <p><a href="#"></a>Detail View</p>
+        </div>
+    </div>
+    <div class="custom">
+        <div class="contents">
+            <div class="top">
+                <h1>
+                    개개인의 특성과 능력을 중시하는 극동건설은<br>
+                    여러분의 <strong>성장의 터</strong>를 마련합니다.
+                </h1>
+            </div>
+            <ul>
+                <li>
+                    <h3>인재상</h3>
+                    <p>극동건설이 추구하는 인재상을<br> 여러분께 소개합니다.</p>
+                </li>
+                <li>
+                    <h3>인사제도</h3>
+                    <p>임직원의 역량향상과 동기부여를<br> 위해 다양한 제도를 운영합니다.</p>
+                </li>
+                <li>
+                    <h3>채용안내</h3>
+                    <p>극동건설의 채용제도 및 절차를<br> 자세히 소개합니다.</p>
+                </li>
+                <li>
+                    <h3>채용공고</h3>
+                    <p>극동건설의 채용공고를<br> 소개합니다.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_grid</title>
+    <style>
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            /* grid-template-columns: auto auto auto; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 200px 100px;
+
+        }
+        .header {
+            background: #aaa;
+            /* grid-column: 1 / 4; */
+            grid-column: 1 / span 3;
+
+        }
+        .slide {
+            background: #bbb;
+            grid-column: 1 / 4;
+        }
+        .content1 {
+            background: #ccc;
+           
+        }
+        .content2 {
+            background: #ddd;
+          
+        }
+        .content3 {
+            background: #eee;
+           
+        }
+        .footer {
+            background: #000;
+            grid-column: 1 / 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">header</div>
+        <div class="slide">slide</div>
+        <div class="content1">content1</div>
+        <div class="content2">content2</div>
+        <div class="content3">content3</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

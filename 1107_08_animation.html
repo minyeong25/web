@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>animation</title>
+    <style>
+        @font-face {
+            font-family: notosans;
+            src: url(webfonts/NotoSansKR-Regular.woff);
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        body {
+            background: #555;
+            color: #fff;
+            margin: 20px;
+            padding: 20px;
+            font-family: notosans;
+        }
+        .banner ul li {
+            padding: 15px 10px;
+            margin: 50px;
+            cursor: pointer;
+            border-radius: 50px;
+            background: #8ac007;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.3),
+                  inset 0 0 10px rgba(255,255,255,0.5),
+                  inset 0 0 50px rgba(255,255,255,0.5);
+        }
+        @keyframes color {
+            0% {background: #8ac007;}
+            100% {background: #333;}
+        }
+        .one {
+            animation: color 2s linear infinite alternate;
+        }
+        @keyframes color2 {
+            0% {background: #8ac007;}
+            25% {background: #07bec0;}
+            50% {background: #c07d07;}
+            75% {background: #333;}
+            100% {background: #8ac007;}
+        }
+        .two:hover {
+            animation: color2 5s linear infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>basic::CSS3 Animation</h1>
+        <ul>
+            <li class="one">마우스를 올리면 색상이 변경됩니다</li>
+            <li class="two">애니메이션은 여러 단계를 통한 변환 효과도 가능합니다</li>
+        </ul>
+    </div>
+</body>
+</html>

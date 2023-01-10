@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      .content_wrap {
+        display: flex;
+        height: 50%;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+      .gnb {
+        width: 20%;
+        border-right: 1px solid #ccc;
+      }
+      .contents {
+        width: 80%;
+        padding: 10px;
+      }
+      p {
+        padding: 20px;
+        cursor: pointer;
+      }
+      p:hover {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content_wrap">
+      <div class="gnb">
+        <p class="tablink" onclick="tab(0)">content1</p>
+        <p class="tablink" onclick="tab(1)">content2</p>
+        <p class="tablink" onclick="tab(2)">content3</p>
+      </div>
+      <div class="contents"><h1>content1</h1></div>
+      <div class="contents"><h1>content2</h1></div>
+      <div class="contents"><h1>content3</h1></div>
+    </div>
+    <script>
+      let chcolor = ["#eee", "#ddd", "#ccc"];
+      let content = document.getElementsByClassName("contents");
+      let btn = document.getElementsByClassName("tablink");
+      function tab(j) {
+        for (let i = 0; i <= 2; i++) {
+          content[i].style.backgroundColor = chcolor[i];
+          //   btn[i].style.backgroundColor = chcolor[i];
+          content[i].style.display = "none";
+          content[j].style.display = "block";
+        }
+      }
+      tab(0);
+    </script>
+  </body>
+</html>

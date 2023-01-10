@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".move").click(function () {
+          $("div")
+            .animate(
+              {
+                width: "100px",
+                height: "100px",
+                borderRadius: "0",
+              },
+              1000,
+              "swing"
+            )
+            .animate({ marginLeft: "100px" })
+            .animate({ marginLeft: "200px" });
+        });
+        //position을 안 줄 경우 움직이지 않음. marginLeft로 넣을 수 있긴함
+        //현재 제이쿼리 라이브러리로는 백그라운드는 바뀌지 않음 css로는 변경 가능
+      });
+    </script>
+  </head>
+  <body>
+    <button class="move">move</button>
+    <div></div>
+  </body>
+</html>

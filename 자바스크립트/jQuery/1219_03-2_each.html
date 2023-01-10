@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        float: left;
+        width: 100px;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("li").css("cursor", "pointer");
+        $("li").click(function () {
+          let bg = $(this).text();
+          console.log(bg);
+          //$("body").css("backgroundColor", bg);
+          $("body").animate({ backgroundColor: bg }, 1000);
+        });
+        $("li").each(function (index, element) {
+          $(this).css({ backgroundColor: $(this).text() });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul>
+      <li data-test="11">#8ac007</li>
+      <li data-test="22">#0f0</li>
+      <li data-test="33">#00f</li>
+      <li data-test="44">#ff0</li>
+      <li data-test="55">#abcdff</li>
+    </ul>
+  </body>
+</html>

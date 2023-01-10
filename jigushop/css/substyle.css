@@ -270,3 +270,119 @@ header #search_bar {
   background: #00913a;
   color: #fff;
 }
+
+/* footer */
+footer .info {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+}
+.info > ul {
+  padding: 20px 0;
+  display: flex;
+  width: 50%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.info > ul > li {
+  width: 33.333%;
+  padding: 10px;
+  font-size: 14px;
+}
+.info > ul > li a {
+  display: inline-block;
+  width: 100%;
+  color: #646464;
+}
+.info > ul > li span {
+  color: #646464;
+}
+.info > ul > li > a:first-child {
+  font-weight: 600;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+.info > .left > li a:first-child {
+  color: #00913a;
+  border-bottom: 1px solid #00913a;
+}
+.info > ul > li ul li span {
+  padding-right: 10px;
+}
+.info > ul > li ul li span:nth-child(1) {
+  font-weight: 600;
+}
+.info > ul > li ul li:last-child span:nth-child(1) {
+  font-weight: 500;
+}
+.info > ul > li ul li span:nth-child(2) {
+  font-size: 12px;
+}
+.info > .left > li span:last-child {
+  font-size: 12px;
+}
+.info > .right > li:last-child ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.info > .right > li:last-child ul li a {
+  background: #646464;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+}
+.info2_wrap {
+  background: #00913a;
+}
+.info2 {
+  background: #00913a;
+  display: flex;
+  height: 200px;
+  width: 1170px;
+  margin: 0 auto;
+}
+.img_wrap {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 50px 10px; */
+}
+.img_wrap img {
+  width: 100%;
+}
+.info2 .text_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info2 .txt_top {
+  display: flex;
+}
+.info2 .txt_top a {
+  color: #fff;
+  font-weight: 600;
+}
+.info2 .txt_top a:last-child::after {
+  display: none;
+}
+.info2 .txt_top a::after {
+  content: "|";
+  padding: 0 10px;
+}
+.info2 p {
+  color: #fff;
+  font-size: 14px;
+}
+.info2 p a {
+  font-size: 11px;
+  display: inline-block;
+  background: #fff;
+  color: #00913a;
+}

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style3.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jigushop.js"></script>
+    <title>지구샵</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+      <div class="header_wrap">
+          <div class="top">
+            <div class="left">
+              <a href="subpage.html"><img src="images/logo.png" alt="logo" /></a>
+            </div>
+            <div class="right">
+              <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="gnb_wrap">
+            <div class="gnb">
+              <ul>
+                <li class="menu"><a href="#">MADE</a></li>
+                <li class="menu">
+                  <a href="subpage.html">장보기</a>
+                  <ul class="sub">
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">선물꾸러미</a></li>
+                    <li><a href="#">식품</a></li>
+                    <li><a href="#">주방</a></li>
+                    <li><a href="#">욕실</a></li>
+                    <li><a href="#">생활</a></li>
+                    <li><a href="#">취미</a></li>
+                    <li><a href="#">음료용품</a></li>
+                    <li><a href="#">여성용품</a></li>
+                    <li><a href="#">반려동물</a></li>
+                    <li><a href="#">화장품</a></li>
+                    <li><a href="#">문구</a></li>
+                  </ul>
+                </li>
+                <li class="menu">
+                  <a href="subpage2.html">지구소개</a>
+                  <ul class="sub">
+                    <li><a href="#">브랜드 소개</a></li>
+                    <li><a href="#">비전</a></li>
+                    <li><a href="#">팀원</a></li>
+                    <li><a href="#">임팩트</a></li>
+                  </ul>
+                </li>
+                <li class="menu">
+                  <a href="#">게시판</a>
+                  <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주묻는질문</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">고객후기</a></li>
+                  </ul>
+                </li>
+                <li class="menu">
+                  <a href="#">콘텐츠</a>
+                  <ul class="sub">
+                    <li><a href="#">지구샵레터</a></li>
+                    <li><a href="#">환경지대</a></li>
+                    <li><a href="#">만나가지구</a></li>
+                    <li><a href="#">덜-쓸궁리</a></li>
+                    <li><a href="#">분리배출 이후 과정</a></li>
+                  </ul>
+                </li>
+                <li class="menu">
+                  <a href="#">지구학교</a>
+                  <ul class="sub">
+                    <li><a href="#">강의일정</a></li>
+                    <li><a href="#">수강신청</a></li>
+                    <li><a href="#">강의후기</a></li>
+                  </ul>
+                </li>
+                <li class="menu">
+                  <a href="#">제안하기</a>
+                  <ul class="sub">
+                    <li><a href="#">제품 입점 제안</a></li>
+                    <li><a href="#">협업/제휴/인터뷰</a></li>
+                    <li><a href="#">도매 B2B몰</a></li>
+                    <li><a href="#">지구샵 매장 내 행사/샵인샵</a></li>
+                  </ul>
+                </li>
+                <li class="menu">
+                  <a href="#">대량주문</a>
+                  <ul class="sub">
+                    <li><a href="#">대량주문</a></li>
+                    <li><a href="#">커스터마이징 주문/문의</a></li>
+                    <li><a href="#">도매 B2B몰</a></li>
+                    <li><a href="#">지구샵 매장 내 행사/샵인샵</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- scroll menu -->
+              <!-- <div class="scroll_gnb">
+                  <ul>
+                    <li class="menu"><a href="#">MADE</a></li>
+                    <li class="menu">
+                      <a href="#">장보기</a>
+                      <ul class="sub">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">선물꾸러미</a></li>
+                        <li><a href="#">식품</a></li>
+                        <li><a href="#">주방</a></li>
+                        <li><a href="#">욕실</a></li>
+                        <li><a href="#">생활</a></li>
+                        <li><a href="#">취미</a></li>
+                        <li><a href="#">음료용품</a></li>
+                        <li><a href="#">여성용품</a></li>
+                        <li><a href="#">반려동물</a></li>
+                        <li><a href="#">화장품</a></li>
+                        <li><a href="#">문구</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu">
+                      <a href="#">지구소개</a>
+                      <ul class="sub">
+                        <li><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">비전</a></li>
+                        <li><a href="#">팀원</a></li>
+                        <li><a href="#">임팩트</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu">
+                      <a href="#">게시판</a>
+                      <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">고객후기</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu">
+                      <a href="#">콘텐츠</a>
+                      <ul class="sub">
+                        <li><a href="#">지구샵레터</a></li>
+                        <li><a href="#">환경지대</a></li>
+                        <li><a href="#">만나가지구</a></li>
+                        <li><a href="#">덜-쓸궁리</a></li>
+                        <li><a href="#">분리배출 이후 과정</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu">
+                      <a href="#"><i class="fa-regular fa-square-caret-down"></i></a>
+                      <ul class="sub_con">
+                        <li>
+                          <a href="#">지구학교</a>
+                          <ul class="sub2">
+                            <li><a href="#">강의일정</a></li>
+                            <li><a href="#">수강신청</a></li>
+                            <li><a href="#">강의후기</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">제안하기</a>
+                          <ul class="sub2">
+                            <li><a href="#">제품 입점 제안</a></li>
+                            <li><a href="#">협업/제휴/인터뷰</a></li>
+                            <li><a href="#">도매 B2B몰</a></li>
+                            <li><a href="#">지구샵 매장 내 행사/샵인샵</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">대량주문</a>
+                          <ul class="sub2">
+                            <li><a href="#">대량주문</a></li>
+                            <li><a href="#">커스터마이징 주문/문의</a></li>
+                            <li><a href="#">도매 B2B몰</a></li>
+                            <li><a href="#">지구샵 매장 내 행사/샵인샵</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="center"><span><i class="fa-light fa-globe"></i></span></div>
+                  <div class="right">
+                    <ul>
+                      <li><a href="#">로그인</a></li>
+                      <li><a href="#">회원가입</a></li>
+                      <li>
+                        <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+               </div> -->
+            <!-- scroll menu end-->
+
+            <div class="search">
+              <input type="text" placeholder="Search" id="search_bar" />
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+          </div>
+      </header>
+      <section id="banner">
+        <div class="slide_wrap">
+          <div class="slide bxslider">
+            <ul class="ban">
+             <li><img src="images/banner1.png" alt="banner1" /></li>
+             <li><img src="images/banner2.png" alt="banner2" /></li>
+             <li><img src="images/banner3.png" alt="banner3" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="content1">
+        <div class="left">
+          <div class="text_wrap">
+            <h2>#BEST</h2>
+            <p>
+              <span>제로웨이스트 입문자도</span>
+              <span>어려움 없이 사용할 수 있는</span>
+              <span>베스트 제품!</span>
+            </p>
+          </div>
+          <div class="left_img"><img src="images/product6-1.JPG" alt="product6-1"></div>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li>
+              <p>
+                <span><strong>[지구샵] 천연물방울수세미(3개입)</strong></span>
+                <span><a>9,900원</a> <a class="price"> 12,000원</a></span>
+              </p>
+              <span class="rect sale">SALE</span>
+              <span class="rect best">BEST</span>
+            </li>
+            <li>
+              <p>
+                <span><strong>[지구샵] 대나무칫솔</strong></span>
+                <span><a>2,800원</a> <a class="price">3,800원</a></span>
+              </p>
+              <span class="rect sale">SALE</span>
+            </li>
+            <li>
+              <p>
+                <span><strong>[지구샵] 제로캐릭터엽서</strong></span>
+                <span><a>1,500원</a> <a class="price">2,000원</a></span>
+              </p>
+              <span class="rect sale">SALE</span>
+            </li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li>
+              <p>
+                <span><strong>[지구샵] 스테인리스 빨대</strong></span>
+                <span>2,000원</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span><strong>[지구샵] 빨대세척솔</strong></span>
+                <span>1,500원</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span><strong>[지구샵] 스트롱고체치약</strong></span>
+                <span><strong>(쿨민트향) 150정입</strong></span>
+                <span>13,400원</span>
+              </p>
+              <span class="rect best">BEST</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="content2">
+        <div class="con_wrap">
+          <div class="left">
+            <img src="images/info1.jpg" alt="info1" />
+          </div>
+          <div class="right">
+            <img src="images/info2.png" alt="info2" />
+            <img src="images/info3.jpg" alt="info3" />
+          </div>
+        </div>
+      </section>
+      <section id="content3" >
+        <div class="txt_box" >
+          <h2>#NEW</h2>
+          <p></p>
+          <p>지구샵만의 꼼꼼한 기준으로 입고된</p>
+          <p>새로운 제로웨이스트 제품을 만나보세요!</p>
+        </div>
+        <div class="item_box autoplay">
+          <!-- <ul class="btn">
+            <li class="prev">prev</li>
+            <li class="next">next</li>
+          </ul> -->
+          <div class="item i1">
+            <div class="item_img">
+                <img src="images/item1.JPG" alt="item1">
+                <img src="images/item1-1.JPG" alt="item1-1">
+            </div>
+            <div>
+              <p class="item_name">[조르단]그린 클린 체인지</p>
+              <p class="price">6,900원</p>
+            </div>
+          </div>
+          <div class="item i2">
+            <div class="item_img">
+              <img src="images/item2.JPG" alt="item2">
+              <img src="images/item2-1.JPG" alt="item2-1">
+            </div>
+            <div>
+              <p class="item_name">[지구샵]병뚜껑 아크릴 수거함</p>
+              <p class="price">550,000원</p>
+            </div>
+          </div>
+          <div class="item i3">
+            <div class="item_img">
+              <img src="images/item3.JPG" alt="item3">
+              <img src="images/item3-1.JPG" alt="item3-1">
+            </div>
+            <div>
+              <p class="item_name">[스투디올로] 휴의 팔로산토 Gift</p>
+              <p class="price">28,000원</p>
+            </div>
+          </div>
+          <div class="item i4">
+            <div class="item_img">
+              <img src="images/item4.JPG" alt="item4">
+              <img src="images/item4-1.JPG" alt="item4-1">
+            </div>
+            <div>
+              <p class="item_name">[파이토플레이크] 크런치 카카오 시리얼</p>
+              <p class="price">15,900원</p>
+            </div>
+          </div>
+          <div class="item i5">
+            <div class="item_img">
+              <img src="images/item5.png" alt="item5">
+              <img src="images/item5-1.png" alt="item5-1">
+            </div>
+            <div>
+              <p class="item_name">[잇츠베러] 통밀츄러스 크래커 mini 28g 낱개</p>
+              <p class="price">1,500원</p>
+            </div>
+          </div>
+          <div class="item i6">
+            <div class="item_img">
+              <img src="images/item6.png" alt="item6">
+              <img src="images/item6-1.png" alt="item6-1">
+            </div>
+            <div>
+              <p class="item_name">[잇츠베러] 초코시나몬 크래커 mini 28g 낱개</p>
+              <p class="price">1,500원</p>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section id="content4">
+        <div class="content_wrap">
+          <div>
+            <h1>JIGUSHOP MISSION</h1>
+          </div>
+          <div class="txt_box">
+            <div class="txt left">
+              <p>우리가 줄인 플라스틱 제품</p>
+              <p>44,664kg</p>
+            </div>
+            <div class="txt center">
+              <p>우리가 순환한 자원의 양</p>
+              <p>12,084개</p>
+            </div>
+            <div class="txt right">
+              <p>사회, 환경적 활동 지원 금액</p>
+              <p>17,647,760원</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="content5">
+        <div class="sns_wrap">
+          <h1>INSTAGRAM</h1>
+          <ul>
+            <li><img src="images/insta1.jpg" alt="insta1" /></li>
+            <li><img src="images/insta2.jpg" alt="insta2" /></li>
+            <li><img src="images/insta3.jpeg" alt="insta3" /></li>
+            <li><img src="images/insta4.jpeg" alt="insta4" /></li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <div class="info_wrap">
+          <div class="info">
+            <ul class="left">
+              <li>
+                <a>대표전화</a>
+                <ul>
+                  <li><span>☎︎ 02-812-2050</span></li>
+                  <li><span>운영시간</span><span>10시 - 18시</span></li>
+                  <li><span>점심시간</span><span>12시 - 13시</span></li>
+                  <li><span>* 온라인CS 주말, 공휴일 휴무</span></li>
+                </ul>
+              </li>
+              <li>
+                <a>지구샵 연남점</a>
+                <ul>
+                  <li><span>☎︎ 070-7721-5748</span></li>
+                  <li><span>영업일</span><span>월 - 일</span></li>
+                  <li><span>운영시간</span><span>11시 - 21시 30분</span></li>
+                  <li><span>* 매월 첫번째 화 휴무</span></li>
+                </ul>
+              </li>
+              <li>
+                <a>지구샵 그로서리점</a>
+                <ul>
+                  <li>
+                    <span>☎︎ 02-812-2050</span>
+                  </li>
+                  <li><span>영업일</span><span>수 - 일</span></li>
+                  <li><span>운영시간</span><span>12시 - 20시</span></li>
+                  <li><span>* 매주 월요일, 화요일 휴무</spa></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="right">
+              <li>
+                <a>지구샵</a>
+                <ul>
+                  <li><a href="#">브랜드소개</a></li>
+                  <li><a href="#">비전</a></li>
+                  <li><a href="#">팀원</a></li>
+                  <li><a href="#">임팩트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a>고객 도움</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">자주묻는질문</a></li>
+                  <li><a href="#">문의하기</a></li>
+                  <li><a href="#">고객후기</a></li>
+                </ul>
+              </li>
+              <li>
+                <a>소셜</a>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="info2_wrap">
+          <div class="info2">
+            <div class="img_wrap">
+              <img src="images/footer_logo.png" alt="footer_logo" />
+            </div>
+            <div class="text_wrap">
+              <div class="txt_top">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">도매 전용 B2B몰</a>
+              </div>
+              <div class="txt_bottom">
+                <p>회사명 : 주식회사 피스온테이블 | 대표자 : 김아리</p>
+                <p>
+                  주소 : 서울특별시 동작구 성대로1길 16, 1층 | 이메일 :
+                  contact@jigushop.co.kr | 팩스 : 0303-3444-2050
+                </p>
+                <p>
+                  <span
+                    >사업자등록번호 : 689-86-00791 | 통신판매업신고 :
+                    제2018-서울동작-0295</span
+                  >
+                  <a href="#">사업자정보확인</a>
+                  <span>| 건강기능식품영업신고 : 제2022-0112707</span>
+                </p>
+                <p>
+                  개인정보보호책임자 : 김아리 | 고객센터 : 02-812-2050 |
+                  호스팅 제공자 : ㈜아임웹
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

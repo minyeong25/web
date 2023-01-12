@@ -210,11 +210,69 @@ header #search_bar {
 #contents p {
   display: flex;
   flex-direction: column;
+  padding: 10px 0;
 }
 #contents span {
   line-height: 30px;
 }
+#store {
+  width: 1170px;
+  margin: 0 auto;
+}
+#store h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+#store > div {
+  /* border: 1px solid #f00; */
+  display: flex;
+  padding: 10px;
+}
+#store > div > div {
+  width: 50%;
+}
+#store > div > .text {
+  color: #646464;
+  display: flex;
+  flex-direction: column;
+}
 
+#store > div > .text > a {
+  padding: 10px 0;
+  font-size: 18px;
+}
+#store > div > .text span a {
+  padding-right: 10px;
+  font-weight: 600;
+}
+#store > div > .text span:last-child {
+  font-size: 14px;
+}
+#store > div > .banner ul {
+  width: 100%;
+}
+#store > div > .banner ul li {
+  padding: 10px;
+}
+#store > div > .banner img {
+  width: 100%;
+}
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  text-indent: -9999px;
+  width: 29px;
+  height: 45px;
+  background: url(../images/btns.png);
+  top: 50%;
+}
+.owl-carousel .owl-nav button.owl-prev {
+  left: 50px;
+}
+.owl-carousel .owl-nav button.owl-next {
+  right: 50px;
+  background-position: -30px 0;
+}
 /* footer */
 footer .info {
   width: 1170px;

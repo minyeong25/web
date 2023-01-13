@@ -216,45 +216,61 @@ header #search_bar {
   line-height: 30px;
 }
 #store {
+  background: #fcfcfc;
+}
+#store .store_wrap {
+  background: #fcfcfc;
   width: 1170px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 #store h1 {
+  font-size: 30px;
+  color: #00913a;
+  text-decoration: underline;
   text-align: center;
   padding: 20px 0;
 }
-#store > div {
+#store .store_wrap > div {
   /* border: 1px solid #f00; */
   display: flex;
   padding: 10px;
 }
-#store > div > div {
+#store .store_wrap > div > div {
   width: 50%;
 }
-#store > div > .text {
+#store .store_wrap > div > .text {
+  /* border: 1px solid #f00; */
+  /* padding: 0 20px; */
   color: #646464;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  /* margin: 0 10px; */
 }
-
-#store > div > .text > a {
+#store .store_wrap > div > .text > a {
   padding: 10px 0;
   font-size: 18px;
 }
-#store > div > .text span a {
+#store .store_wrap > div > .text span a {
   padding-right: 10px;
   font-weight: 600;
 }
-#store > div > .text span:last-child {
+#store .store_wrap > div > .text span:last-child {
   font-size: 14px;
 }
-#store > div > .banner ul {
+#store .store_wrap > div > .banner {
+  overflow: hidden;
+}
+#store .store_wrap > div > .banner ul {
+  position: relative;
   width: 100%;
 }
-#store > div > .banner ul li {
+#store .store_wrap > div > .banner ul li {
   padding: 10px;
 }
-#store > div > .banner img {
+#store .store_wrap > div > .banner img {
   width: 100%;
 }
 .owl-carousel .owl-nav button.owl-prev,
@@ -264,13 +280,14 @@ header #search_bar {
   width: 29px;
   height: 45px;
   background: url(../images/btns.png);
-  top: 50%;
+  top: 45%;
+  transform: translateY(-50%);
 }
 .owl-carousel .owl-nav button.owl-prev {
-  left: 50px;
+  left: 20px;
 }
 .owl-carousel .owl-nav button.owl-next {
-  right: 50px;
+  right: 20px;
   background-position: -30px 0;
 }
 /* footer */

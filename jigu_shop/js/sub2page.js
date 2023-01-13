@@ -6,6 +6,6 @@ $(function () {
     items: 1,
     autoplay: true,
     autoplayTimeout: 5000,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
   });
 });

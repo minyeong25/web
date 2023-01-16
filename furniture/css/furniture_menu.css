@@ -52,51 +52,67 @@ header h1 {
 }
 
 .nav1 {
+  /* border: 1px solid #f00; */
   position: fixed;
   width: 10%;
   height: 100%;
   top: 0;
   left: 0%;
   display: block;
-  background: #e9e9e9;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+  background: #f4f4f4;
   z-index: 5;
   opacity: 0;
   transition: all 1s;
 }
-.nav1 > span,
+.nav1 .fa-xmark {
+  padding: 20px;
+  font-size: 25px;
+  color: #000;
+}
+
+.nav1 .nav1_wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 100px;
+  margin-left: 30px;
+}
+/* .nav1 > span,
 .nav1 > ul {
+  margin-left: 30px;
   position: relative;
   top: 10%;
+} */
+.nav1 .nav1_wrap > ul {
+  position: relative;
+  top: 30px;
 }
-.nav1 span:nth-child(2),
+.nav1 .nav1_wrap span:nth-child(1),
 .nav2 span:first-child {
   font-weight: 700;
   font-size: 20px;
 }
-.nav1 span {
+.nav1 .nav1_wrap span {
   font-weight: 600;
   padding: 10px;
   /* font-size: 16px; */
 }
-.nav1 span:hover {
+.nav1 .nav1_wrap span:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.nav1 ul {
+.nav1 .nav1_wrap ul {
   padding: 10px;
   /* position: relative; */
 }
-.nav1 ul li {
+.nav1 .nav1_wrap ul li {
   padding: 5px 0;
   /* height: 100%; */
 }
-.nav1 ul li a {
+.nav1 .nav1_wrap ul li a {
   font-weight: 600;
 }
-.nav1 ul li:hover {
+.nav1 .nav1_wrap ul li:hover {
   cursor: pointer;
   text-decoration: underline;
   /* color: #6ce2fb; */
@@ -105,20 +121,39 @@ header h1 {
   position: fixed;
   top: 0%;
   left: 30%;
-  /* display: block; */
+  transition: all 0.7s;
+  opacity: 0;
   height: 100%;
   width: 10%;
-  background: #fff;
-  border: 1px solid cyan;
+  /* z-index: 10; */
 }
-.nav2 span,
+.nav2 > div {
+  border-left: 1px solid #f00;
+  position: relative;
+  padding-left: 30px;
+  top: 177px;
+  /* nav1의 탑과 똑같은 %으로 해도 위치가 다른이유.. */
+}
+/* .nav2 span,
+.nav2 ul {
+  margin-left: 30px;
+  position: relative;
+  top: 16%;
+  top: 190px;
+} */
+/* .nav2 span {
+  top: 180px;
+} */
 .nav2 ul {
   position: relative;
-  top: 14%;
+  top: 30px;
 }
-.nav2:not(.living) {
+/* .nav2:not(.living) {
   display: block;
   opacity: 0.5;
+} */
+.nav2 ul li:hover {
+  text-decoration: underline;
 }
 /* menu end */
 .snsSet ul li {
@@ -165,10 +200,10 @@ header h1 {
   grid-template-rows: repeat(4, 260px);
   grid-template-columns: repeat(5, 1fr);
 }
-#contents article {
-  /* float: left; */
-  /* height: 260px; */
-}
+/* #contents article {
+  float: left;
+  height: 260px;
+} */
 #contents article div {
   position: relative;
   width: 100%;
@@ -302,16 +337,16 @@ em {
   color: #b3effc;
   transition: all 0.5s;
 }
-#contents article:nth-child(3) .txt {
-  /* background: #bff7fa; */
-}
-#contents article:nth-child(3) .txt i {
-  /* font-size: 200px;
+/* #contents article:nth-child(3) .txt {
+  background: #bff7fa;
+} */
+/* #contents article:nth-child(3) .txt i {
+  font-size: 200px;
   color: #fff;
   bottom: 0;
   right: 0;
-  opacity: 0.7; */
-}
+  opacity: 0.7;
+} */
 #contents article:hover .txt i {
   right: 0;
   opacity: 0.5;

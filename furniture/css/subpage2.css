@@ -110,6 +110,9 @@ hr {
   padding: 1em;
   padding-bottom: 1.5em;
 }
+#contents h3 {
+  padding-top: 0.5em;
+}
 #contents > .nav span {
   font-size: 14px;
   font-style: italic;

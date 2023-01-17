@@ -106,164 +106,56 @@ hr {
   max-width: 1200px;
   margin-top: 150px;
 }
-#contents .list {
-  padding-left: 1em;
-  display: flex;
-}
-#contents .list li a {
-  font-size: 14px;
-}
-#contents .list li:last-child a {
-  color: #56b9cd;
-  text-decoration: underline;
-}
-#contents .list li::after {
-  content: ">";
-  padding: 0.5em;
-  text-decoration: none;
-}
-#contents .list li:last-child::after {
-  display: none;
-}
-#contents .list li:hover a {
-  text-decoration: underline;
-}
 #contents h1 {
   padding: 1em;
+  padding-bottom: 1.5em;
+}
+#contents > .nav span {
+  font-size: 14px;
+  font-style: italic;
 }
 #contents > .nav > ul {
   display: flex;
+  flex-wrap: wrap;
 }
 #contents > .nav > ul li {
-  width: 20%;
-  padding: 1em;
+  width: 33.333%;
+  height: 100%;
+  padding: 10px 5px;
+  box-sizing: border-box;
 }
-#contents > .nav > ul li:hover a {
-  text-decoration: underline;
+#contents > .nav > ul > li > a {
+  width: 100%;
+  height: 220px;
+  display: block;
+  overflow: hidden;
+}
+#contents > .nav > ul li:hover img {
+  transform: scale(1.1);
 }
 #contents > .nav > ul li img {
   width: 100%;
-}
-.product {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-.product ul {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  /* flex-wrap: wrap; */
-}
-.product ul li {
-  cursor: pointer;
-  width: 25%;
-  padding: 1em;
-}
-.product li > a {
-  display: block;
-  /* width: 285px; */
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.product li a img {
-  width: 100%;
-  /* object-fit: cover; */
-}
-.product li a img:last-child {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: all 0.3s;
+  transition: all 1s;
 }
-.product li:hover a img:last-child {
-  opacity: 1;
+#contents .fa-arrow-right {
+  float: right;
+  font-size: 1.8em;
+  padding-right: 0.5rem;
 }
-.product p {
-  display: flex;
-  flex-direction: column;
+#contents .nav ul li:hover .fa-arrow-right {
+  animation: move 1s infinite alternate linear;
 }
-.product p > span {
-  padding: 5px 0;
+@keyframes move {
+  0% {
+    padding-right: 1rem;
+  }
+  100% {
+    padding-right: 0.5rem;
+  }
 }
-.product .price {
-  font-size: 18px;
-}
-.product p span:nth-child(2) {
-  font-size: 14px;
-}
-.product .star {
-  font-size: 12px;
-}
-.product .fa-basket-shopping {
-  background: #56b9cd;
-  padding: 8px;
-  margin-right: 10px;
-  border-radius: 50%;
-  color: #fff;
-}
-.product .fa-heart {
-  /* background: #e9e9e9; */
-  padding: 8px;
-  border-radius: 50%;
-}
-.product .fa-heart:hover {
-  background: #e9e9e9;
-}
-.product p span:last-child i {
-  margin-right: 10px;
-}
-.product .first-row li:nth-child(4) > p,
-.product .second-row li:first-child {
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  /* width: auto;
-  height: auto; */
-  font-size: 14px;
-  cursor: auto;
-}
-.product .first-row li:nth-child(4) > p img {
-  width: 50px;
-  height: 50px;
-}
-.product .first-row li:nth-child(4) > p strong,
-.product .second-row li:first-child strong {
-  font-size: 26px;
-  padding: 1em 0;
-}
-.product .first-row li:nth-child(4) > p span:last-child {
-  cursor: pointer;
-  padding: 1em 0;
-  text-decoration: underline;
-}
-.product .second-row li button,
-#contents > button {
-  cursor: pointer;
-  margin: 1em 0;
-  width: 100px;
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-}
-.product .second-row li button:hover,
-#contents > button:hover {
-  background: #ccc;
-  text-decoration: underline;
-}
-#contents > button {
-  margin-bottom: 30px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
+/* section end */
 /* @media screen and (max-width: 1599px) {
   header {
     position: relative;
@@ -299,6 +191,9 @@ hr {
   #gnb li a {
     padding: 0 10px;
   }
+  #contents .nav > ul li {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 779px) {
   #gnb li a {
@@ -306,6 +201,9 @@ hr {
   }
   #gnb li i {
     margin-right: 5px;
+  }
+  #contents .nav > ul li {
+    width: 100%;
   }
 }
 @media screen and (max-width: 639px) {
@@ -351,7 +249,8 @@ hr {
     border-radius: 10px;
     color: #fff;
   }
-  #contents {
+  #contents .nav ul li:not(first-child),
+  #contents h1 {
     display: none;
   }
 }

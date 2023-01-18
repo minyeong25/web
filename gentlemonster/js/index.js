@@ -40,12 +40,22 @@ $(function () {
     nextani();
   });
 
+  // 메뉴 고정
+  let fixmenu = $("header").offset().top;
+  $(window).scroll(function () {
+    let wd = $(this).scrollTop();
+    if (fixmenu <= wd) {
+      $("header").addClass("fixed");
+    } else {
+      $("header").removeClass("fixed");
+    }
+  });
   //메뉴 변경
-  $(function () {
+  /*$(function () {
     $(function () {
       function resizefn() {
         let wd = $(window).width();
-        if (wd < 1039) {
+        if (wd < 1020) {
           $("nav ul, .icon li:nth-child(3)").hide();
         } else {
           $("nav ul, .icon li:nth-child(3)").show();
@@ -57,8 +67,26 @@ $(function () {
       // $(".btn").addClass("on");
       $(".menubtn").click(function () {
         $(this).toggleClass("on");
-        $("nav ul").toggle();
+        $(".sidemenu").css({ right: "0px" });
+        $(".sidemenu").toggle();
       });
     });
+  });*/
+
+  //#contents sunglass banner
+
+  $(".autoplay").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    arrows: true,
+    dots: false,
+    prevArrow:
+      '<span class="leftarrow"><i class="fa-solid fa-chevron-left"></i></span>',
+    nextArrow:
+      '<span class="rightarrow"><i class="fa-solid fa-chevron-right"></i></span>',
+    draggable: true,
   });
 });

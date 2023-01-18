@@ -63,7 +63,7 @@ $(function () {
     prevArrow:
       '<span class="prev"><i class="fa-solid fa-chevron-left"></i></span>',
     nextArrow:
-      '<span class="next"><i class="fa-solid fa-angle-right"></i></span>',
+      '<span class="next"><i class="fa-solid fa-chevron-right"></i></span>',
     draggable: true,
   });
   $("#content3 .item .item_img").hover(

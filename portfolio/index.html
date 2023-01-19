@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js"></script>
     <title>portfolio</title>
   </head>
   <body>
@@ -20,8 +21,11 @@
     </header>
     <section id="main">
       <div class="text">
-        <h1>안녕하세요.</h1>
-        <h1>성장하는 웹퍼블리셔 김민영입니다.</h1>
+        <h1 class="anitext">안녕하세요.</h1>
+        <h1 class="anitext">
+          <span>열정</span>을 겸비한, <span>성장</span>하는 웹퍼블리셔
+          김민영입니다.
+        </h1>
       </div>
     </section>
 
@@ -40,86 +44,155 @@
     </div>
     <section id="profile">
       <div class="profile_wrap">
-        <div class="photo">
-          <img src="images/profile.png" alt="profile" />
-          <p>#성실한 #책임감 #긍정적인</p>
-        </div>
-        <div class="info">
-          <ul>
-            <li><strong>Education</strong></li>
-            <li>
-              2022.09 - 2023.01<br />
-              대전그린컴퓨터아트학원 <br />- ui/ux 반응형 웹디자인 웹퍼블리셔
-              양성과정 수료
-            </li>
-            <li>2022.02</li>
-            <li>대학교 졸업</li>
-          </ul>
-          <ul>
-            <li><strong>Certificate</strong></li>
-            <li>GTQ 포토샵 1급</li>
-            <li>HSK 5급</li>
-          </ul>
-          <div class="skills">
-            <div class="skill">
-              <div class="skill_name">HTML</div>
-              <div class="skill_bar">
-                <div class="skill_per" per="90%" style="max-width: 90%"></div>
-              </div>
+        <h1>my profile</h1>
+        <div class="container">
+          <div class="photo">
+            <img src="images/profile.png" alt="profile" />
+            <p>#성실한 #책임감 #긍정적</p>
+          </div>
+          <div class="info">
+            <div class="txt">
+              <ul>
+                <li><strong>Education</strong></li>
+                <li>
+                  2022.09 - 2023.01<br />
+                  대전그린컴퓨터아트학원 - ui/ux 반응형 웹디자인 웹퍼블리셔
+                  양성과정 수료
+                </li>
+                <!-- <li>
+                  대전그린컴퓨터아트학원 - ui/ux 반응형 웹디자인 웹퍼블리셔
+                  양성과정 수료
+                </li> -->
+                <li>2022.02<br />대학교 졸업</li>
+                <!-- <li>대학교 졸업</li> -->
+              </ul>
+              <ul>
+                <li><strong>Certificate</strong></li>
+                <li>GTQ 포토샵 1급</li>
+                <li>HSK 5급</li>
+              </ul>
             </div>
-
-            <div class="skill">
-              <div class="skill_name">CSS</div>
-              <div class="skill_bar">
-                <div class="skill_per" per="80%" style="max-width: 80%"></div>
+            <div class="skills">
+              <div class="skill">
+                <div class="skill_name">HTML</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="90%" style="max-width: 90%"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill_name">Javascript&J-query</div>
-              <div class="skill_bar">
-                <div class="skill_per" per="70%" style="max-width: 70%"></div>
+              <div class="skill">
+                <div class="skill_name">CSS</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="80%" style="max-width: 80%"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill_name">photoshop</div>
-              <div class="skill_bar">
-                <div class="skill_per" per="70%" style="max-width: 70%"></div>
+              <div class="skill">
+                <div class="skill_name">Javascript&J-query</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="70%" style="max-width: 70%"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill_name">illustrator</div>
-              <div class="skill_bar">
-                <div class="skill_per" per="70%" style="max-width: 70%"></div>
+              <div class="skill">
+                <div class="skill_name">photoshop</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="70%" style="max-width: 70%"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill">
-              <div class="skill_name">그누보드, php, figma</div>
+              <div class="skill">
+                <div class="skill_name">illustrator</div>
+                <div class="skill_bar">
+                  <div class="skill_per" per="70%" style="max-width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill_name">그 외 ) 그누보드, php, figma</div>
+              </div>
             </div>
           </div>
-        </div>
+        </di >
       </div>
     </section>
     <section id="web">
-      <h1>web project</h1>
-      <div class="first">
-        <div class="text">
-          <h3>01.프로젝트 이름</h3>
-          <p class="skill">
-            skill: <span>#html</span> <span>#css</span> <span>#jquery</span>
-          </p>
-          <p class="interactive"><span>반응형페이지</span></p>
-          <p>페이지 기본적인 설명</p>
+      <div class="custom-shape-divider-top-1674138656">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+        </svg>
+    </div>
+      <div class="container">
+        <h1>web project</h1>
+        <div class="project">
+          <div class="text">
+            <h3>01.지구샵 클론코딩</h3>
+            <!-- <p class="interactive"><span>반응형페이지</span></p> -->
+            <p>지구샵은 일상 속에서 누구나 제로웨이스트를 실천할 수 있도록 돕는 
+              사이트이다. 친환경적인 비전과 어울리는 페이지의 주요색깔이 초록색과
+              깔끔한 디자인이 마음에 들어서 클론 코딩을 하게 되었다.</p>
+              <p>&#35;main+subpage1,2</p>
+            <p class="skillbox">
+              <span>html</span> <span>css</span> <span>jquery</span>
+            </p>
+            <p class="link">
+              <a href="jigushop">바로가기</a>
+            </p>
+          </div>
+          <div class="thumnail">
+            <div><img src="images/jigushop_desktop_imac.png" alt="jigushop" /></div>
+          </div>
         </div>
-        <div class="thumbnail">
-          <img src="" alt="" />
-          이미지 넣기
+        <div class="project second">
+          <div class="thumnail">
+            <div><img src="images/furniture_desktop_imac.png" alt="furniture" /></div>
+          </div>
+          <div class="text">
+            <h3>02.가구브랜드 디자인</h3>
+            <p class="interactive"><span>반응형페이지</span></p>
+            <p>기존에 없는 가상의 가구브랜드를 구상하여 집모양을 모티브로 브랜드 로고를 
+              제작하였고 웹페이지를 디자인하였다.</p>
+            <p>&#35;반응형 웹페이지 &#35;main+subpage1,2</p>
+            <p class="skillbox">
+              <span>html</span> <span>css</span>
+            </p>
+            <p class="link">
+              <a href="furniture">바로가기</a>
+            </p>
+          </div>
         </div>
+        <div class="project third">
+          <div class="text">
+            <h3>03.티파니앤코 리디자인</h3>
+            <p class="interactive"><span>반응형페이지</span></p>
+            <p>티파니앤코의 기존 페이지에 아쉬운 점을 보완하며 리디자인 하였다. 
+              티파니앤코의 브랜드 색을 적절히 사용하여 통일성을 주려고 했으며
+              주력 상품의 영상을 편집하여 메인 배너로 사용하였다.
+            </p>
+            <p>&#35;반응형 웹페이지 &#35;mainpage</p>
+            <p class="skillbox">
+              <span>html</span> <span>css</span> <span>jquery</span>
+            </p>
+            <p class="link">
+              <a href="tiffanyandco">바로가기</a>
+            </p>
+          </div>
+          <div class="thumnail">
+            <div><img src="images/tiffany_desktop_imac.png" alt="tiffanyandco" /></div>
+          </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1674145517">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+          </svg>
       </div>
+      </div >
     </section>
     <section id="contact">
-      <h1>포부/다짐</h1>
-      <p>email :</p>
-      <p>연락처 :</p>
+      <div class="contact_wrap">
+        <h1>클라이언트의 요구와 의도를 파악하여 ~~할 수 있는 퍼블리셔가 되겠습니다!</h1>
+        <div>
+          <p>contact</p>
+          <p>email : email@naver.com</p>
+          <p>연락처 : 010-0000-0000</p>
+        </div>
+      </div>
+      
     </section>
   </body>
 </html>

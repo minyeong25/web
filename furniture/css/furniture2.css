@@ -1,6 +1,6 @@
 @charset "utf-8";
 @font-face {
-  font-family: OpenSans;
+  font-family: "OpenSans";
   src: url(../webfonts/OpenSans-Regular.woff) format("woff");
 }
 * {
@@ -16,7 +16,7 @@ a {
 }
 body {
   font: 1em;
-  font-family: OpenSans, sans-serif;
+  font-family: "OpenSans", sans-serif;
 }
 header {
   /* background: url(../images/chair.jpg); */
@@ -32,11 +32,14 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-header h1 {
+/*header h1 {
   width: 180px;
   height: 136px;
   background-image: url(../images/LOGO.png);
   text-indent: -9999px;
+}*/
+header .logo2 {
+  display: none;
 }
 #gnb li a {
   text-align: center;
@@ -278,9 +281,13 @@ header h1 {
     flex-direction: row;
   }
   header h1 {
-    width: 250px;
-    height: 50px;
-    background: url(../images/LOGO-2.png);
+    display: none;
+  }
+  header a:first-child {
+    display: none;
+  }
+  header .logo2 {
+    display: block;
   }
   #gnb li {
     float: left;
@@ -507,11 +514,11 @@ header h1 {
     background: transparent;
     z-index: 1;
   }
-  header h1 {
+  /*header h1 {
     width: 180px;
     height: 136px;
     background: url(../images/LOGO.png);
-  }
+  }*/
   #gnb {
     width: 70%;
     margin-top: -200px;

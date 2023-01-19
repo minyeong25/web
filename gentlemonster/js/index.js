@@ -73,8 +73,7 @@ $(function () {
     });
   });*/
 
-  //#contents sunglass banner
-
+  //#contents > sunglass banner
   $(".autoplay").slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -89,4 +88,6 @@ $(function () {
       '<span class="rightarrow"><i class="fa-solid fa-chevron-right"></i></span>',
     draggable: true,
   });
+
+  // contents2 style 가로스크롤 이벤트
 });

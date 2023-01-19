@@ -1,4 +1,12 @@
 @charset "utf-8";
+@font-face {
+  font-family: "noto";
+  src: url(../webfonts/NotoSansKR-Regular.woff) format(woff);
+}
+body {
+  font-size: 1em;
+  font-family: "noto";
+}
 .navbar-brand img {
   margin: -8px 0 0 0;
   width: 150px;
@@ -31,9 +39,14 @@
   object-fit: cover;
 }
 .featurette-heading {
+  font-size: 2.5em;
   display: flex;
   flex-direction: column;
 }
 .text-muted {
+  font-size: 2rem;
   padding: 0.5rem 0;
+}
+.nav-item:hover a {
+  color: #81d8d0;
 }

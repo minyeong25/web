@@ -1,6 +1,6 @@
 @charset "utf-8";
 @font-face {
-  font-family: OpenSans;
+  font-family: "OpenSans";
   src: url(../webfonts/OpenSans-Regular.woff) format("woff");
 }
 * {
@@ -17,7 +17,7 @@ a {
 body {
   position: relative;
   font: 1em;
-  font-family: OpenSans, sans-serif;
+  font-family: "OpenSans", sans-serif;
   /* display: grid; */
   /* grid-template-columns: 2fr 8fr; */
 }

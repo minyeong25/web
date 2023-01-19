@@ -1,4 +1,8 @@
 @charset "utf-8";
+@font-face {
+  font-family: "noto";
+  src: url(../webfonts/NotoSansKR-Medium.woff) format(woff);
+}
 
 * {
   padding: 0;
@@ -16,7 +20,7 @@ body {
   height: 100%;
 }
 body {
-  font-family: Arial, "맑음 고딕", 돋움, Doctum, sans-serif;
+  font-family: "noto", Arial, "맑음 고딕", 돋움, Doctum, sans-serif;
   overflow: hidden;
 }
 /* menu */

@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* layout */
+#wrap {
+  width: 100%;
+}
+#header {
+  height: 42px;
+  background: #fff;
+}
+#banner {
+  width: 100%;
+  height: 470px;
+  background: #bbb;
+}
+#contents {
+}
+#footer {
+}
+
+/* container */
+.container {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  /* background: rgba(0, 0, 0, 0.4);*/
+}
+
+/* cont layout */
+#cont1 {
+  width: 100%;
+  height: 940px;
+  background: #f5f6f8;
+}
+#cont2 {
+  width: 100%;
+  height: 555px;
+  background: #efefef;
+}
+
+/* footer layout */
+#footer_notice {
+  width: 100%;
+  height: 71px;
+  background: #fff;
+}
+#footer_info {
+  width: 100%;
+  height: 242px;
+  background: #f7f8f9;
+}
+
+/* header */
+.header {
+  font-family: "맑은 고딕", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+.header li a {
+  display: block;
+  padding: 3px 15px;
+  margin: 7px 0;
+  font-size: 13px;
+}
+.header .list1 {
+  float: left;
+  overflow: hidden;
+}
+.header .list1 li {
+  float: left;
+}
+.header .list1 li.green a {
+  margin-right: 15px;
+  border-radius: 3px;
+  background: #00907f;
+  color: #fff;
+}
+.header .list1 li a {
+  float: left;
+  color: #333;
+  font-weight: bold;
+}
+.header .list1 li::after {
+  position: absolute;
+  top: 7px;
+  content: "|";
+}
+.header .list1 li:last-child::after {
+  display: none;
+}
+.header .list2 li::after {
+  top: 7px;
+  position: absolute;
+  content: "|";
+}
+.header .list2 li.log::after {
+  display: none;
+}
+.header .list2 {
+  float: right;
+  overflow: hidden;
+}
+.header .list2 li {
+  float: left;
+}
+.header .list2 li:last-child a {
+  padding-right: 0;
+}
+.header .list2 li.log a {
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.header .list2 li a {
+  padding: 3px 15px;
+  color: #797979;
+}
+
+/* banner right */
+.ban_right {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 600px;
+  height: 270px;
+  background: #fff;
+}
+.ban_right .br_tit {
+  background: #fff;
+  height: 180px;
+  padding: 55px 190px 60px 100px;
+}
+.ban_right .br_tit h3 {
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 44px;
+  font-weight: 700;
+}
+.ban_right .br_tit p {
+  font-size: 14px;
+  padding-top: 50px;
+}
+.ban_right .br_tit strong {
+  font-weight: normal;
+  color: #00907f;
+}
+.ban_right .br_tit .login_btn {
+  position: absolute;
+  right: 60px;
+  top: 65px;
+}
+.ban_right .br_tit .login_btn ul {
+}
+.ban_right .br_tit .login_btn li {
+  margin-bottom: 1px;
+}
+.ban_right .br_tit .login_btn li a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.ban_right .br_tit .login_btn li.lb1 a {
+  background: #db3360;
+}
+.ban_right .br_tit .login_btn li.lb2 a {
+  background: #3c3f44;
+}
+
+.ban_right .br_btn {
+  background: #00907f;
+  height: 50px;
+  margin-top: 25px;
+}
+.ban_right .br_btn ul {
+}
+.ban_right .br_btn li {
+}

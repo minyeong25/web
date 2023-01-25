@@ -136,7 +136,6 @@ $(function () {
           }
           // 마우스휠을 아래에서 위로
         } else {
-          //if (wd <= 1700 && wd >= 900)
           if (wd <= 1700 && wd >= 900) {
             $("#contents2").addClass("on");
           } // else {

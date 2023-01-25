@@ -138,8 +138,8 @@ a {
 }
 .ban_right .br_tit {
   background: #fff;
-  height: 180px;
-  padding: 55px 190px 60px 100px;
+  height: 160px;
+  padding: 45px 180px 60px 80px;
 }
 .ban_right .br_tit h3 {
   font-size: 36px;
@@ -148,8 +148,18 @@ a {
   font-weight: 700;
 }
 .ban_right .br_tit p {
+  position: relative;
   font-size: 14px;
   padding-top: 50px;
+}
+.ban_right .br_tit p::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #00907f;
+  position: absolute;
+  left: 0;
+  top: 24px;
 }
 .ban_right .br_tit strong {
   font-weight: normal;
@@ -158,7 +168,7 @@ a {
 .ban_right .br_tit .login_btn {
   position: absolute;
   right: 60px;
-  top: 65px;
+  top: 55px;
 }
 .ban_right .br_tit .login_btn ul {
 }
@@ -169,18 +179,29 @@ a {
   display: block;
   width: 80px;
   height: 80px;
-  line-height: 80px;
+  /* line-height: 80px; */
   text-align: center;
   color: #fff;
   font-size: 14px;
 }
 .ban_right .br_tit .login_btn li.lb1 a {
-  background: #db3360;
+  background: #db3360 url(../images/user_white.svg) no-repeat center 15px;
+  background-size: 25px;
+  padding-top: 50px;
+  height: 30px;
+  transition: all 0.3s ease;
+}
+.ban_right .br_tit .login_btn li.lb1 a:hover {
+  background-color: #c4204c;
 }
 .ban_right .br_tit .login_btn li.lb2 a {
+  line-height: 80px;
   background: #3c3f44;
+  transition: all 0.3s ease;
 }
-
+.ban_right .br_tit .login_btn li.lb2 a:hover {
+  background: #333;
+}
 .ban_right .br_btn {
   background: #00907f;
   height: 50px;
@@ -189,4 +210,86 @@ a {
 .ban_right .br_btn ul {
 }
 .ban_right .br_btn li {
+  position: relative;
+  height: 50px;
+  float: left;
+  overflow: hidden;
+  width: 25%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+}
+.ban_right .br_btn li::before {
+  content: "";
+  width: 1px;
+  height: 14px;
+  background-color: #62bdb1;
+  position: absolute;
+  left: 0;
+  top: 19px;
+}
+.ban_right .br_btn li:first-child::before {
+  display: none;
+}
+.ban_right .br_btn li a {
+  color: #fff;
+}
+/* cont1 layout */
+#nav {
+  width: 100%;
+  padding: 33px 0;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+#nav .gnb {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+#nav .gnb li {
+}
+#nav .gnb li a {
+  display: block;
+  font-size: 17px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+#nav .gnb li a:hover {
+  background: #00907f;
+  color: #fff;
+  border-radius: 3px;
+}
+#nav .gnb_right {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+#nav .gnb_right li.search a {
+}
+#nav .gnb_right li.gr a {
+  text-align: center;
+  width: 80px;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+#nav .gnb_right li.gr1 a {
+  border: 1px solid #e1e1e1;
+}
+#nav .gnb_right li.gr2 a {
+  border: 1px solid #404b57;
+  background: #404b57;
+  color: #fff;
+}
+
+/* card */
+#card {
+}
+/* event */
+#event {
 }

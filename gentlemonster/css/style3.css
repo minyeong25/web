@@ -187,11 +187,15 @@ nav ul li a {
   font-weight: bold;
 }
 #slide .banner {
-  width: 100%;
+  height: 100vh;
+  /* width: 100%;*/
   position: relative;
 }
 #slide .banner img {
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  /*width: 100%;*/
 }
 #slide .banner div {
   width: 100%;
@@ -203,16 +207,21 @@ nav ul li a {
   align-items: center;
   color: #fff;
 }
-
+#contents {
+  /*border: 1px solid #00f;
+  width: 100vw;
+  height: 100vh;*/
+}
 #contents .typo {
+  /*border: 1px solid #f00;*/
   background: url(../images/typo.png);
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   white-space: nowrap;
   animation: rolling_typo 120s linear infinite;
   position: relative;
   left: 0;
-  top: 50px;
+  /* top: 50px; */
 }
 
 @keyframes rolling_typo {
@@ -226,15 +235,16 @@ nav ul li a {
 
 #contents .div_wrap {
   display: flex;
+  margin: 0 auto;
 }
 #contents .div_wrap .txt {
+  width: 30%;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* background: #ccc; */
-  width: 30%;
   text-align: center;
 }
 #contents .div_wrap .txt h2 {
@@ -274,7 +284,6 @@ nav ul li a {
 #contents2 {
   margin-top: 2em;
   width: 100%;
-  max-width: 1200px;
 }
 #contents2.on {
   position: sticky;
@@ -328,8 +337,45 @@ nav ul li a {
 #contents2 .container div img {
   max-width: 500px;
 }
+#contents3 div {
+  position: relative;
+}
+#contents3 div.title h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: #fff;
+}
+#contents3 div img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+#contents3 div.info_wrap {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#contents3 div.info {
+  width: 40%;
+  margin: 20px 0;
+  text-align: center;
+}
+#contents3 div.info div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+#contents3 div.info button {
+  width: 170px;
+  padding: 10px;
+  background: #ffff;
+  border: 1px solid #000;
+}
+
 footer {
-  height: 1000px;
   background: #e9e9e9;
 }
 footer .footer_nav {

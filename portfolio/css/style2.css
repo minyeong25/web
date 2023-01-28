@@ -1,0 +1,101 @@
+@charset "utf-8";
+@font-face {
+  font-family: "notosans";
+  src: url(../webfonts/NotoSansKR-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "merri";
+  src: url(../webfonts/Merriweather-Regular.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #555;
+}
+body {
+  font-size: 1em;
+  font-family: "notosans", "merri", dotum, Arial, sans-serif;
+}
+
+/* header */
+header .container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+#logo {
+  width: 100px;
+}
+#nav {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+#nav li a {
+  display: block;
+  text-align: center;
+}
+
+/* #main */
+#main .container {
+  border: 1px solid #ff0;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+#main .photo {
+  border: 1px solid #f00;
+  width: 300px;
+  height: 400px;
+  margin-left: 100px;
+}
+.text {
+  border: 1px solid #f00;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* profile */
+#profile .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#profile .container .left {
+}
+#profile .container .right {
+}
+#profile .container .right ul {
+}
+#profile .container .right ul li {
+}
+
+/* project */
+#project {
+}
+#project .container {
+}
+#project .container .project ul {
+  display: flex;
+}
+#project .container ul li a {
+  display: block;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+}
+#project .container ul li a img {
+  width: 100%;
+  height: 100%;
+}

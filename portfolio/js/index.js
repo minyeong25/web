@@ -3,11 +3,20 @@ $(function () {
 
   $(window).scroll(function () {
     let window = $(this).scrollTop();
-    if (nav <= window) {
-      $("#nav").addClass("fixed");
+    console.log(nav);
+    if (window > 0 && window < 900) {
+      $("header").addClass("fixed");
+    } else if (window >= 900) {
+      $(".skill_per").css({ "animation-play-state": "running" });
     } else {
-      $("#nav").removeClass("fixed");
+      $("header").removeClass("fixed");
     }
-    console.log(window);
+    // else {
+    //   $(".skill_per").css({ "animation-play-state": "paused" });
+    // }
   });
+
+  // $("#profile").hover(function () {
+  //   $(".skill_per").css({ "animation-play-state": "running" });
+  // });
 });

@@ -25,6 +25,8 @@ body {
 }
 header {
   width: 100%;
+  background: #fff;
+  z-index: 10;
 }
 header nav {
   width: 100%;
@@ -38,12 +40,18 @@ header #nav {
   display: flex;
   z-index: 5;
 }
-header #nav.fixed {
+header.fixed {
   position: fixed;
   top: 0;
   left: 50%;
   transform: translate(-50%);
 }
+/* header #nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+} */
 header ul li {
   width: 25%;
 }
@@ -206,7 +214,8 @@ section {
   background: #ffa751;
   border-radius: 3px;
   position: relative;
-  animation: fillBars 2.5s 1;
+  /* animation: fillBars 2.5s 1; */
+  animation: fillBars 2.5s 1 paused;
 }
 .skill_per::before {
   content: attr(per);
